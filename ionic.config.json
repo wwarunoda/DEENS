@@ -1,0 +1,7 @@
+{
+  "name": "DEENS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

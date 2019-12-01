@@ -1,0 +1,7 @@
+<button (click)="resetLocations()">Reset Locations</button>
+<button (click)="goThroughLine()">Quick path follower</button>
+<label>Speed</label>
+<input [(ngModel)]="vehicleSpeed">
+<button (click)="fallowThePath()">Follow the path by given speed</button>
+<p>Total passed distance is - {{distanceCompletedKm}}</p>
+<div id="map"></div>
