@@ -54,6 +54,7 @@ interface FileSystem {
  * each of which may be a File or DirectoryEntry.
  */
 interface Entry {
+  getDirectory(directoryToCreate: string, arg1: { create: boolean; }, successHandler: () => void, errorHandler: (err: any) => void);
     /** Entry is a file. */
     isFile: boolean;
     /** Entry is a directory. */

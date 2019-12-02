@@ -260,6 +260,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.fileOpener2"
       ]
+    },
+    {
+      "id": "cordova-sqlite-storage.SQLitePlugin",
+      "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+      "pluginId": "cordova-sqlite-storage",
+      "clobbers": [
+        "SQLitePlugin"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.cordova.plugin.sqliteporter.sqlitePorter",
+      "file": "plugins/uk.co.workingedge.cordova.plugin.sqliteporter/www/sqlitePorter.js",
+      "pluginId": "uk.co.workingedge.cordova.plugin.sqliteporter",
+      "clobbers": [
+        "cordova.plugins.sqlitePorter"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -273,6 +289,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-gyroscope": "0.1.4",
     "cordova-plugin-sensors": "0.7.0",
     "cordova-plugin-file": "6.0.2",
-    "cordova-plugin-file-opener2": "2.2.1"
+    "cordova-plugin-file-opener2": "2.2.1",
+    "cordova-sqlite-storage": "3.4.0",
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.1"
   };
 });

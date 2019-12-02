@@ -458,7 +458,7 @@ module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-ap
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <h1>Acceleration Data</h1>\n  <h2>X - {{accX}}</h2>\n  <h2>Y - {{accY}}</h2>\n  <h2>Z - {{accZ}}</h2>\n  <h1>Speed: {{currentSpeed}}</h1>\n\n  <!-- <ul>\n    <li *ngFor=\"let item of directionList; let i = index\">\n      {{i}} {{item.direction}} {{item.axis}}\n    </li>\n  </ul> -->"
+module.exports = "<h1>Acceleration Data</h1>\n<h2>X - {{accX}}</h2>\n<h2>Y - {{accY}}</h2>\n<h2>Z - {{accZ}}</h2>\n<h1>Speed: {{currentSpeed}}</h1>\n\n<!-- <ul>\n    <li *ngFor=\"let item of directionList; let i = index\">\n      {{i}} {{item.direction}} {{item.axis}}\n    </li>\n  </ul> -->\n\n<ion-input [(ngModel)]=\"description\" placeholder=\"Enter Log\"></ion-input>\n\n<ion-button expand=\"block\" (click)=\"addlog()\">Add log</ion-button>\n\n<ion-list>\n  <ion-item *ngFor=\"let log of logs | async\">\n    <ion-label>\n      <h2>{{log.id}}-{{ log.name }}</h2>\n    </ion-label>\n  </ion-item>\n</ion-list>"
 
 /***/ }),
 
@@ -530,7 +530,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXE1TQ1xcREVFTlMgV09SS0lOR1xcREVFTlMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
+module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2xhaGlydS9Eb2N1bWVudHMvUHJvamVjdHMvREVFTlMvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sZWFmbGV0LWNvbnRyb2wtY29udGFpbmVyIC5sZWFmbGV0LXJvdXRpbmctY29udGFpbmVyLWhpZGUge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -614,6 +614,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_device_motion_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/device-motion/ngx */ "./node_modules/@ionic-native/device-motion/ngx/index.js");
 /* harmony import */ var _components_leaflet_leaflet_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/leaflet/leaflet.component */ "./src/app/components/leaflet/leaflet.component.ts");
 /* harmony import */ var _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/acceleration/acceleration.component */ "./src/app/components/acceleration/acceleration.component.ts");
+/* harmony import */ var _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/sqlite-porter/ngx */ "./node_modules/@ionic-native/sqlite-porter/ngx/index.js");
+/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
 
 
 
@@ -639,13 +645,15 @@ var AppModule = /** @class */ (function () {
                 _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__["AccelerationComponent"]
             ],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"]],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
                 _ionic_native_gyroscope_ngx__WEBPACK_IMPORTED_MODULE_10__["Gyroscope"],
-                _ionic_native_device_motion_ngx__WEBPACK_IMPORTED_MODULE_11__["DeviceMotion"]
+                _ionic_native_device_motion_ngx__WEBPACK_IMPORTED_MODULE_11__["DeviceMotion"],
+                _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_15__["SQLite"],
+                _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_14__["SQLitePorter"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
@@ -682,17 +690,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/measure-point.service */ "./src/app/services/measure-point.service.ts");
+/* harmony import */ var src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/database.service */ "./src/app/services/database.service.ts");
+
 
 
 
 
 var AccelerationComponent = /** @class */ (function () {
-    function AccelerationComponent(navCtrl, platform, measurePointService) {
+    function AccelerationComponent(navCtrl, platform, measurePointService, db) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.platform = platform;
         this.measurePointService = measurePointService;
+        this.db = db;
         /* extend from abstract class */
+        this.logs = [];
+        this.log = {};
         this.directionList = [];
         this.currentSpeed = 0;
         this.currentSign = true;
@@ -708,6 +721,27 @@ var AccelerationComponent = /** @class */ (function () {
             _this.onSensorChange();
         });
     }
+    AccelerationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.db.getDatabaseState().subscribe(function (rdy) {
+            if (rdy) {
+                _this.db.getLogs().subscribe(function (logs) {
+                    _this.logs = logs;
+                    console.log(logs);
+                });
+            }
+        });
+    };
+    /**
+     * add log to db
+     */
+    AccelerationComponent.prototype.addlog = function () {
+        var _this = this;
+        this.db.addLog(this.description)
+            .then(function (_) {
+            _this.log = {};
+        });
+    };
     /* returrns parameters, using buffer: average acceleration
       since last call of getPoint().
     */
@@ -746,7 +780,7 @@ var AccelerationComponent = /** @class */ (function () {
                     if (!_this.currentVelocity) {
                         _this.correctVelocitySign = _this.getSignCalculation(calDirection.direction, _this.currentSign);
                     }
-                    if (_this.correctVelocitySign == calDirection.direction) {
+                    if (_this.correctVelocitySign === calDirection.direction) {
                         _this.currentSpeed = _this.currentSpeed + (calSpeed ? calSpeed : 0);
                     }
                     else {
@@ -774,7 +808,8 @@ var AccelerationComponent = /** @class */ (function () {
     AccelerationComponent.ctorParameters = function () { return [
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
-        { type: _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"] }
+        { type: _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"] },
+        { type: src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__["DatabaseService"] }
     ]; };
     AccelerationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -784,7 +819,8 @@ var AccelerationComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
-            _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"]])
+            _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"],
+            src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__["DatabaseService"]])
     ], AccelerationComponent);
     return AccelerationComponent;
 }());
@@ -800,7 +836,7 @@ var AccelerationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */"
+module.exports = "div{\n    height: 1000px;\n    width: 100%;\n  }\n  \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xuICAgIGhlaWdodDogMTAwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gICJdfQ== */"
 
 /***/ }),
 
@@ -996,6 +1032,127 @@ var LeafletComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_lat_lng_service__WEBPACK_IMPORTED_MODULE_3__["LatLngService"]])
     ], LeafletComponent);
     return LeafletComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/database.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/database.service.ts ***!
+  \**********************************************/
+/*! exports provided: DatabaseService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatabaseService", function() { return DatabaseService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/sqlite-porter/ngx */ "./node_modules/@ionic-native/sqlite-porter/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+
+
+
+
+var DatabaseService = /** @class */ (function () {
+    function DatabaseService(plt, sqlitePorter, sqlite, http) {
+        var _this = this;
+        this.plt = plt;
+        this.sqlitePorter = sqlitePorter;
+        this.sqlite = sqlite;
+        this.http = http;
+        this.dbReady = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"](false);
+        this.logs = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"]([]);
+        this.products = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"]([]);
+        this.plt.ready().then(function () {
+            _this.sqlite.create({
+                name: 'logs.db',
+                location: 'default'
+            })
+                .then(function (db) {
+                _this.database = db;
+                // this.seedDatabase();
+            });
+        });
+    }
+    /**
+     * seed db with dummy data
+     */
+    DatabaseService.prototype.seedDatabase = function () {
+        var _this = this;
+        this.http.get('assets/seed.sql', { responseType: 'text' })
+            .subscribe(function (sql) {
+            _this.sqlitePorter.importSqlToDb(_this.database, sql)
+                .then(function (_) {
+                _this.loadLogs();
+                _this.dbReady.next(true);
+            })
+                .catch(function (e) { return console.error(e); });
+        });
+    };
+    /**
+     * get db state
+     */
+    DatabaseService.prototype.getDatabaseState = function () {
+        return this.dbReady.asObservable();
+    };
+    /**
+     * get cuurent logs
+     */
+    DatabaseService.prototype.getLogs = function () {
+        return this.logs.asObservable();
+    };
+    /**
+     * load all current logs
+     */
+    DatabaseService.prototype.loadLogs = function () {
+        var _this = this;
+        return this.database.executeSql('SELECT * FROM log', []).then(function (data) {
+            var logs = [];
+            if (data.rows.length > 0) {
+                for (var i = 0; i < data.rows.length; i++) {
+                    logs.push({
+                        id: data.rows.item(i).id,
+                        name: data.rows.item(i).name
+                    });
+                }
+            }
+            _this.logs.next(logs);
+            console.log(logs);
+        });
+    };
+    /**
+     * @param description string
+     * add new log
+     */
+    DatabaseService.prototype.addLog = function (description) {
+        var _this = this;
+        return this.database.executeSql('INSERT INTO log (description) VALUES (?)', description).then(function (data) {
+            console.log(description + 'log added');
+            _this.loadLogs();
+        });
+    };
+    DatabaseService.ctorParameters = function () { return [
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"] },
+        { type: _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__["SQLitePorter"] },
+        { type: _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__["SQLite"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+    ]; };
+    DatabaseService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__["SQLitePorter"], _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__["SQLite"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
+    ], DatabaseService);
+    return DatabaseService;
 }());
 
 
@@ -1380,7 +1537,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\MSC\DEENS WORKING\DEENS\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/lahiru/Documents/Projects/DEENS/src/main.ts */"./src/main.ts");
 
 
 /***/ })
