@@ -14,7 +14,10 @@ import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device
 
 import { LeafletComponent } from './components/leaflet/leaflet.component';
 import { AccelerationComponent } from './components/acceleration/acceleration.component';
-
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+ 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +25,15 @@ import { AccelerationComponent } from './components/acceleration/acceleration.co
     AccelerationComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Gyroscope,
-    DeviceMotion
+    DeviceMotion,
+    SQLite,
+    SQLitePorter
   ],
   bootstrap: [AppComponent]
 })

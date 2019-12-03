@@ -1,11 +1,23 @@
-  <h1>Acceleration Data</h1>
-  <h2>X - {{accX}}</h2>
-  <h2>Y - {{accY}}</h2>
-  <h2>Z - {{accZ}}</h2>
-  <h1>Speed: {{currentSpeed}}</h1>
+<h1>Acceleration Data</h1>
+<h2>X - {{accX}}</h2>
+<h2>Y - {{accY}}</h2>
+<h2>Z - {{accZ}}</h2>
+<h1>Speed: {{currentSpeed}}</h1>
 
-  <!-- <ul>
+<!-- <ul>
     <li *ngFor="let item of directionList; let i = index">
       {{i}} {{item.direction}} {{item.axis}}
     </li>
   </ul> -->
+
+<ion-input [(ngModel)]="description" placeholder="Enter Log"></ion-input>
+
+<ion-button expand="block" (click)="addlog()">Add log</ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let log of logs | async">
+    <ion-label>
+      <h2>{{log.id}}-{{ log.name }}</h2>
+    </ion-label>
+  </ion-item>
+</ion-list>
