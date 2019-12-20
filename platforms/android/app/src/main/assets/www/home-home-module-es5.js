@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<button (click)=\"leaflet()\">Got To Map</button>\n<button (click)=\"acceleration()\">Got To Acceleration</button>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<button (click)=\"leaflet()\">Got To Map</button>\r\n<button (click)=\"acceleration()\">Got To Acceleration</button>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -68,7 +68,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2xhaGlydS9Eb2N1bWVudHMvUHJvamVjdHMvREVFTlMvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksYUFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gICAgZGlzcGxheTogbm9uZTtcbn0iLCIubGVhZmxldC1jb250cm9sLWNvbnRhaW5lciAubGVhZmxldC1yb3V0aW5nLWNvbnRhaW5lci1oaWRlIHtcbiAgZGlzcGxheTogbm9uZTtcbn0iXX0= */"
+module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9EOlxcTVNDXFxERUVOUyBXT1JLSU5HXFxERUVOUy9zcmNcXGFwcFxcaG9tZVxcaG9tZS5wYWdlLnNjc3MiLCJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxhQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5sZWFmbGV0LWNvbnRyb2wtY29udGFpbmVyIC5sZWFmbGV0LXJvdXRpbmctY29udGFpbmVyLWhpZGUge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxufSIsIi5sZWFmbGV0LWNvbnRyb2wtY29udGFpbmVyIC5sZWFmbGV0LXJvdXRpbmctY29udGFpbmVyLWhpZGUge1xuICBkaXNwbGF5OiBub25lO1xufSJdfQ== */"
 
 /***/ }),
 

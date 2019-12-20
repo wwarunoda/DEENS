@@ -6,48 +6,62 @@ import { Direction } from '../models/direction.model';
   providedIn: 'root'
 })
 export class MeasurePointService {
-  private sign: boolean;
-  private directionList: Direction[] = [];
-  private tempDirection : Direction;
-  private acceleration: number;
+  private vZ: number = 0;
+  private eX: number = 0;
+  private eY: number = 0;
+  private eZ: number = 0;
+  private errorSpeed: number = 0;
+  private errorSpeedZ: number = 0;
+  private speed: number = 0;
+  private speedChange: number = 0;
+  private speedChangeZ: number = 0;
 
   constructor() {}
-    calSpeed(currentData: Point): number {
-      const unsignAccX = currentData.accX < 0 ? currentData.accX * (-1) : currentData.accX;
-      const unsignAccY = currentData.accY < 0 ? currentData.accY * (-1) : currentData.accY;
-      const unsignAccZ = currentData.accZ < 0 ? currentData.accZ * (-1) : currentData.accZ;
-      if (unsignAccX > unsignAccY) {
-        if(unsignAccX > unsignAccZ) {
-          const direction = currentData.accX > 0 ? true : false;
-          const axis = 1;
-          this.tempDirection = {direction, axis}
-        } else {
-          const direction = currentData.accZ > 0 ? true : false;
-          const axis = 3;
-          this.tempDirection = {direction, axis}
-        }        
-      }
-      else {
-        if(unsignAccY > unsignAccZ){
-          const direction = currentData.accY > 0 ? true : false;
-          const axis = 2;
-          this.tempDirection = {direction, axis}
-        } else {
-          const direction = currentData.accZ > 0 ? true : false;
-          const axis = 3;
-          this.tempDirection = {direction, axis}
-        }        
-      }
-      this.directionList = [...this.directionList, this.tempDirection];
+    calSpeed(currentData: Point): Point {
 
       currentData = this.getAvaragePoint(currentData);
-      this.acceleration = currentData.accX * currentData.accX +
-                          currentData.accY * currentData.accX +
-                          currentData.accZ * currentData.accX;
 
-      this.acceleration =  Math.sqrt(this.acceleration);
-      const timeLap: number = ((currentData.accelerationFrequency) / 1000);
-      return this.acceleration * timeLap * 3.6 ; // * 3.6 to convert m/s to km/h
+      if(currentData.gpsSpeed < 0.5) {
+        this.setError(currentData);
+      }
+
+
+      currentData = this.reduceError(currentData);
+      
+      const accelerationBoth = Math.sqrt((currentData.accX * currentData.accX) + (currentData.accY * currentData.accY) + (currentData.accZ * currentData.accZ));
+      this.speedChange = accelerationBoth * currentData.lapTime;
+      this.speedChangeZ = (currentData.accZ * -1) * currentData.lapTime;
+      if(currentData.accZ <= 0) {
+        /*
+        This time vihicle go ahead. so speed = speedPre + accelerationSpped. But accZ is -. So speed = speedPre - (-accelerationSpped)
+         */
+        if(currentData.gpsSpeed >= 9) {
+          this.vZ = currentData.currentSpeedZ + this.speedChangeZ - this.errorSpeedZ;
+          this.speed = currentData.currentSpeed + this.speedChange - this.errorSpeed;
+        } else {
+          this.vZ = currentData.gpsSpeed + this.speedChangeZ;
+          this.speed = currentData.gpsSpeed + this.speedChange;
+        }        
+      } else {
+        /*
+        This time vihicle go ahead. so speed = speedPre - accelerationSpped. But accZ is +. So speed = speedPre - (accelerationSpped)
+         */
+        if(currentData.gpsSpeed >= 9) {
+          this.vZ = currentData.currentSpeedZ - this.speedChangeZ - this.errorSpeedZ;
+          this.speed = currentData.currentSpeed - this.speedChange - this.errorSpeed;
+        } else {
+          this.vZ = currentData.gpsSpeed - this.speedChangeZ;
+          this.speed = currentData.gpsSpeed - this.speedChange;
+        }         
+      } 
+
+      if(currentData.gpsSpeed < 9) {
+        this.setSpeedError(this.speed, this.vZ, currentData);
+      }
+      this.vZ = this.vZ < 0 ? 0 : this.vZ;
+      this.speed = this.speed < 0 ? 0 : this.speed;
+
+      return this.getPoint();
   }
 
   getAvaragePoint(currentData: Point): Point {
@@ -57,34 +71,39 @@ export class MeasurePointService {
     return currentData;
   }
 
-  getCurrentDirection() : Direction {
-    const xDirections = this.directionList.filter(xDirection => xDirection.axis === 1);
-    const yDirections = this.directionList.filter(yDirection => yDirection.axis === 2);
-    const zDirections = this.directionList.filter(zDirection => zDirection.axis === 3);
-    if(xDirections.length > yDirections.length){
-      if(xDirections.length > zDirections.length) {
-        const directionSignPluse = xDirections.filter(sign => sign.direction === true);
-        const tempSign = directionSignPluse.length > ( xDirections.length * 0.5 ) ? true : false;
-        return {direction: tempSign, axis: 1};
-      } else {
-        const directionSignPluse = zDirections.filter(sign => sign.direction === true);
-        const tempSign = directionSignPluse.length > ( zDirections.length * 0.5 ) ? true : false;
-        return {direction: tempSign, axis: 3};
-      }
-    } else {
-      if(yDirections.length > zDirections.length) {
-        const directionSignPluse = yDirections.filter(sign => sign.direction === true);
-        const tempSign = directionSignPluse.length > ( yDirections.length * 0.5 ) ? true : false;
-        return {direction: tempSign, axis: 2};
-      } else {
-        const directionSignPluse = zDirections.filter(sign => sign.direction === true);
-        const tempSign = directionSignPluse.length > ( zDirections.length * 0.5 ) ? true : false;
-        return {direction: tempSign, axis: 3};
-      }
-    }  
+  reduceError(currentData: Point): Point {
+    currentData.accX -= this.eX;
+    currentData.accY -= this.eY;
+    currentData.accZ -= this.eZ;
+    return currentData;
   }
 
-  clearDirectionList() {
-    this.directionList = [];
+  setError(currentData: Point) {
+    this.eX = (this.eX + currentData.accX) / 2;
+    this.eY = (this.eY + currentData.accY) / 2;
+    this.eZ = (this.eZ + currentData.accZ) / 2;
   }
+
+  setSpeedError(speed: number, speedZ: number, currentData: Point) {
+    const error = speed - currentData.gpsSpeed;
+    const errorZ = speedZ - currentData.gpsSpeed;
+    this.errorSpeed = (this.errorSpeed + error) / 2;
+    this.errorSpeedZ = (this.errorSpeed + errorZ) / 2;
+  }
+
+ private getPoint(): Point {
+  const point: Point = {
+    currentSpeed: this.speed,
+    currentSpeedZ: this.vZ,
+    speedChange: this.speedChange,
+    speedChangeZ: this.speedChangeZ,
+    accErrorX: this.eX,
+    accErrorY: this.eY,
+    accErrorZ: this.eZ,
+    errorSpeed: this.errorSpeed,
+    errorSpeedZ: this.errorSpeedZ
+  }
+  return point;
+}
+
 }

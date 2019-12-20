@@ -447,7 +447,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n"
 
 /***/ }),
 
@@ -458,7 +458,7 @@ module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-ap
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Acceleration Data</h1>\n<h2>X - {{accX}}</h2>\n<h2>Y - {{accY}}</h2>\n<h2>Z - {{accZ}}</h2>\n<h1>Speed: {{currentSpeed}}</h1>\n\n<!-- <ul>\n    <li *ngFor=\"let item of directionList; let i = index\">\n      {{i}} {{item.direction}} {{item.axis}}\n    </li>\n  </ul> -->\n\n<ion-input [(ngModel)]=\"description\" placeholder=\"Enter Log\"></ion-input>\n\n<ion-button expand=\"block\" (click)=\"addlog()\">Add log</ion-button>\n\n<ion-list>\n  <ion-item *ngFor=\"let log of logs | async\">\n    <ion-label>\n      <h2>{{log.id}}-{{ log.name }}</h2>\n    </ion-label>\n  </ion-item>\n</ion-list>"
+module.exports = "<h1>Speed: {{currentSpeed}} Km/h</h1>\r\n\r\n<h1>{{currentSpeedZ}} m/s</h1>\r\n\r\n<ion-button expand=\"block\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button expand=\"block\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n\r\n\r\n<table>\r\n  <tr>\r\n    <td size=\"4\">Longitude</td>\r\n    <td> {{gpsLatLng.lat}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Latitude</td>\r\n    <td>{{gpsLatLng.lng}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Speed</td>\r\n    <td>{{gpsSpeed}}</td>\r\n  </tr>\r\n</table>\r\n\r\n"
 
 /***/ }),
 
@@ -469,7 +469,7 @@ module.exports = "<h1>Acceleration Data</h1>\n<h2>X - {{accX}}</h2>\n<h2>Y - {{a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<button (click)=\"resetLocations()\">Reset Locations</button>\n<button (click)=\"goThroughLine()\">Quick path follower</button>\n<label>Speed</label>\n<input [(ngModel)]=\"vehicleSpeed\">\n<button (click)=\"fallowThePath()\">Follow the path by given speed</button>\n<p>Total passed distance is - {{distanceCompletedKm}}</p>\n<div id=\"map\"></div>\n"
+module.exports = "<button (click)=\"resetLocations()\">Reset Locations</button>\r\n<button (click)=\"goThroughLine()\">Quick path follower</button>\r\n<label>Speed</label>\r\n<input [(ngModel)]=\"vehicleSpeed\">\r\n<button (click)=\"fallowThePath()\">Follow the path by given speed</button>\r\n<p>Total passed distance is - {{distanceCompletedKm}}</p>\r\n<div id=\"map\"></div>\r\n"
 
 /***/ }),
 
@@ -530,7 +530,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2xhaGlydS9Eb2N1bWVudHMvUHJvamVjdHMvREVFTlMvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sZWFmbGV0LWNvbnRyb2wtY29udGFpbmVyIC5sZWFmbGV0LXJvdXRpbmctY29udGFpbmVyLWhpZGUge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
+module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXE1TQ1xcREVFTlMgV09SS0lOR1xcREVFTlMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -616,7 +616,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/acceleration/acceleration.component */ "./src/app/components/acceleration/acceleration.component.ts");
 /* harmony import */ var _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/sqlite-porter/ngx */ "./node_modules/@ionic-native/sqlite-porter/ngx/index.js");
 /* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+
 
 
 
@@ -645,10 +653,13 @@ var AppModule = /** @class */ (function () {
                 _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__["AccelerationComponent"]
             ],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"]],
-            providers: [
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_20__["HttpClientModule"]],
+            providers: [_ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_16__["EmailComposer"],
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
+                _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_17__["AndroidPermissions"],
+                _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_18__["Geolocation"],
+                _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_19__["LocationAccuracy"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
                 _ionic_native_gyroscope_ngx__WEBPACK_IMPORTED_MODULE_10__["Gyroscope"],
                 _ionic_native_device_motion_ngx__WEBPACK_IMPORTED_MODULE_11__["DeviceMotion"],
@@ -690,57 +701,101 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/measure-point.service */ "./src/app/services/measure-point.service.ts");
-/* harmony import */ var src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/database.service */ "./src/app/services/database.service.ts");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+
+
+
 
 
 
 
 
 var AccelerationComponent = /** @class */ (function () {
-    function AccelerationComponent(navCtrl, platform, measurePointService, db) {
-        var _this = this;
-        this.navCtrl = navCtrl;
+    function AccelerationComponent(platform, measurePointService, emailComposer, androidPermissions, geolocation, locationAccuracy) {
         this.platform = platform;
         this.measurePointService = measurePointService;
-        this.db = db;
-        /* extend from abstract class */
+        this.emailComposer = emailComposer;
+        this.androidPermissions = androidPermissions;
+        this.geolocation = geolocation;
+        this.locationAccuracy = locationAccuracy;
+        /*
+        declarations
+        */
+        /*
+        extend from abstract class
+        */
         this.logs = [];
-        this.log = {};
-        this.directionList = [];
-        this.currentSpeed = 0;
-        this.currentSign = true;
-        this.currentVelocity = null;
-        this.accX = 0;
-        this.accY = 0;
-        this.accZ = 0;
+        this.logList = [];
         this.cnt = 0;
         this.bufferSize = 100;
         this.accelerationFrequency = 20;
         this.accelerationType = 'LINEAR_ACCELERATION';
-        this.platform.ready().then(function () {
-            _this.onSensorChange();
-        });
+        this.previusSpeed = 0;
+        this.previusSpeedX = 0;
+        this.previusSpeedY = 0;
+        this.previusSpeedZ = 0;
+        this.currentSpeed = "0";
+        this.currentSpeedX = "0";
+        this.currentSpeedY = "0";
+        this.currentSpeedZ = "0";
+        this.accX = 0;
+        this.accY = 0;
+        this.accZ = 0;
+        this.accErrorX = 0;
+        this.accErrorY = 0;
+        this.accErrorZ = 0;
+        this.fixError = true;
+        this.gpsSpeed = 0;
+        this.gpsLatLng = { lat: 0, lng: 0 };
+        this.options = {
+            timeout: 1000
+        };
+        this.timetest = Date.now();
     }
     AccelerationComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.db.getDatabaseState().subscribe(function (rdy) {
-            if (rdy) {
-                _this.db.getLogs().subscribe(function (logs) {
-                    _this.logs = logs;
-                    console.log(logs);
-                });
-            }
+        this.platform.ready().then(function () {
+            _this.onSensorChange();
+            _this.checkGPSPermission();
         });
     };
-    /**
-     * add log to db
-     */
-    AccelerationComponent.prototype.addlog = function () {
+    AccelerationComponent.prototype.fixedErrorStop = function () {
+        this.strtTime = new Date();
+        this.fixError = false;
+    };
+    AccelerationComponent.prototype.onSensorChange = function () {
         var _this = this;
-        this.db.addLog(this.description)
-            .then(function (_) {
-            _this.log = {};
-        });
+        // Access acceleration
+        sensors.enableSensor(this.accelerationType);
+        setInterval(function () {
+            sensors.getState(function (values) {
+                _this.cnt++;
+                _this.accX += values[0];
+                _this.accY += values[1];
+                _this.accZ += values[2];
+                if (_this.cnt >= _this.bufferSize) {
+                    _this.locationCalculation();
+                }
+            });
+        }, this.accelerationFrequency);
+    };
+    AccelerationComponent.prototype.locationCalculation = function () {
+        var tempPoint = this.getPoint();
+        this.resetAcc();
+        var measureData = this.measurePointService.calSpeed(tempPoint);
+        this.accErrorX = measureData.accErrorX;
+        this.accErrorY = measureData.accErrorY;
+        this.accErrorZ = measureData.accErrorZ;
+        if (!this.fixError) {
+            this.currentSpeedZ = (measureData.currentSpeedZ * 3.6).toFixed(4);
+            this.currentSpeed = (measureData.currentSpeed * 3.6).toFixed(4);
+            this.previusSpeed = measureData.currentSpeed;
+            this.previusSpeedZ = measureData.currentSpeedZ;
+            this.writePointLog(tempPoint, measureData);
+        }
     };
     /* returrns parameters, using buffer: average acceleration
       since last call of getPoint().
@@ -751,53 +806,36 @@ var AccelerationComponent = /** @class */ (function () {
             accY: this.accY,
             accZ: this.accZ,
             cnt: this.cnt,
-            accelerationFrequency: this.accelerationFrequency,
-            currentSpeed: 0
+            lapTime: (this.accelerationFrequency * this.cnt * 0.001),
+            currentSpeed: this.previusSpeed,
+            currentSpeedX: this.previusSpeedX,
+            currentSpeedY: this.previusSpeedY,
+            currentSpeedZ: this.previusSpeedZ,
+            gpsSpeed: this.gpsSpeed
         };
         return point;
     };
-    AccelerationComponent.prototype.onSensorChange = function () {
-        var _this = this;
-        sensors.enableSensor(this.accelerationType);
-        setInterval(function () {
-            sensors.getState(function (values) {
-                var localX = values[0];
-                var localY = values[1];
-                var localZ = values[2];
-                _this.accX += localX;
-                _this.accY += localY;
-                _this.accZ += localZ;
-                if (_this.cnt < _this.bufferSize - 1) {
-                    _this.cnt++;
-                }
-                else {
-                    var tempPoint = _this.getPoint();
-                    _this.resetAcc();
-                    var calSpeed = _this.measurePointService.calSpeed(tempPoint);
-                    // this.currentSpeed = calSpeed ? calSpeed : 0;
-                    var calDirection = _this.measurePointService.getCurrentDirection();
-                    _this.directionList = _this.directionList.concat([calDirection]);
-                    if (!_this.currentVelocity) {
-                        _this.correctVelocitySign = _this.getSignCalculation(calDirection.direction, _this.currentSign);
-                    }
-                    if (_this.correctVelocitySign === calDirection.direction) {
-                        _this.currentSpeed = _this.currentSpeed + (calSpeed ? calSpeed : 0);
-                    }
-                    else {
-                        _this.currentSpeed = _this.currentSpeed - (calSpeed ? calSpeed : 0);
-                    }
-                    _this.measurePointService.clearDirectionList();
-                }
-            });
-        }, this.accelerationFrequency);
-    };
-    AccelerationComponent.prototype.getSignCalculation = function (givenSign, currentSign) {
-        if (currentSign === givenSign) {
-            return true;
-        }
-        else {
-            return false;
-        }
+    /**
+     * add log to db
+     */
+    AccelerationComponent.prototype.writePointLog = function (point, measureData) {
+        var log = {
+            accX: point.accX / point.cnt,
+            accY: point.accY / point.cnt,
+            accZ: point.accZ / point.cnt,
+            currentSpeedZ: measureData.currentSpeedZ * -3.6,
+            currentSpeed: measureData.currentSpeed * 3.6,
+            startTime: this.strtTime,
+            accErrorX: measureData.accErrorX,
+            accErrorY: measureData.accErrorY,
+            accErrorZ: measureData.accErrorZ,
+            speedChange: measureData.speedChange,
+            speedChangeZ: measureData.speedChangeZ,
+            errorSpeed: measureData.errorSpeed,
+            errorSpeedZ: measureData.errorSpeedZ,
+            gpsSpeed: this.gpsSpeed
+        };
+        this.logList = this.logList.concat([log]);
     };
     AccelerationComponent.prototype.resetAcc = function () {
         this.accX = 0;
@@ -805,11 +843,86 @@ var AccelerationComponent = /** @class */ (function () {
         this.accZ = 0;
         this.cnt = 0;
     };
+    AccelerationComponent.prototype.sendEmail = function () {
+        var _this = this;
+        var logJson = JSON.stringify(this.logList);
+        var email = {
+            to: 'arunoda89@gmail.com',
+            cc: 'arunoda.17@cse.mrt.ac.lk',
+            bcc: [],
+            attachments: [],
+            subject: 'DEENS',
+            body: logJson,
+            isHtml: true
+        };
+        this.emailComposer.isAvailable().then(function (available) {
+            if (available) {
+                _this.emailComposer.open(email);
+            }
+        });
+    };
+    /*******************************************************************************GPS  */
+    //Check if application having GPS access permission  
+    AccelerationComponent.prototype.checkGPSPermission = function () {
+        var _this = this;
+        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION).then(function (result) {
+            if (result.hasPermission) {
+                //If having permission show 'Turn On GPS' dialogue
+                _this.askToTurnOnGPS();
+            }
+            else {
+                //If not having permission ask for permission
+                _this.requestGPSPermission();
+            }
+        }, function (err) {
+            alert(err);
+        });
+    };
+    AccelerationComponent.prototype.requestGPSPermission = function () {
+        var _this = this;
+        this.locationAccuracy.canRequest().then(function (canRequest) {
+            if (canRequest) {
+                console.log("4");
+            }
+            else {
+                //Show 'GPS Permission Request' dialogue
+                _this.androidPermissions.requestPermission(_this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION)
+                    .then(function () {
+                    // call method to turn on GPS
+                    _this.askToTurnOnGPS();
+                }, function (error) {
+                    //Show alert if user click on 'No Thanks'
+                    alert('requestPermission Error requesting location permissions ' + error);
+                });
+            }
+        });
+    };
+    AccelerationComponent.prototype.askToTurnOnGPS = function () {
+        var _this = this;
+        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(function () {
+            // When GPS Turned ON call method to get Accurate location coordinates
+            _this.getLocationCoordinates();
+        }, function (error) { return alert('Error requesting location permissions ' + JSON.stringify(error)); });
+    };
+    // Methos to get device accurate coordinates using device GPS
+    AccelerationComponent.prototype.getLocationCoordinates = function () {
+        var _this = this;
+        this.geolocation.getCurrentPosition(this.options).then(function () {
+        }).catch(function (error) {
+            alert('Error getting location' + error);
+        });
+        this.geolocation.watchPosition().subscribe(function (resp) {
+            _this.gpsLatLng = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+            _this.gpsSpeed = resp.coords.speed;
+        });
+    };
     AccelerationComponent.ctorParameters = function () { return [
-        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
         { type: _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"] },
-        { type: src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__["DatabaseService"] }
+        { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"] },
+        { type: _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"] },
+        { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__["Geolocation"] },
+        { type: _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__["LocationAccuracy"] }
     ]; };
     AccelerationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -817,10 +930,12 @@ var AccelerationComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./acceleration.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/acceleration/acceleration.component.html"),
             styles: [__webpack_require__(/*! ./acceleration.component.scss */ "./src/app/components/acceleration/acceleration.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
             _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"],
-            src_app_services_database_service__WEBPACK_IMPORTED_MODULE_4__["DatabaseService"]])
+            _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"],
+            _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"],
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__["Geolocation"],
+            _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__["LocationAccuracy"]])
     ], AccelerationComponent);
     return AccelerationComponent;
 }());
@@ -836,7 +951,7 @@ var AccelerationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{\n    height: 1000px;\n    width: 100%;\n  }\n  \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xuICAgIGhlaWdodDogMTAwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gICJdfQ== */"
+module.exports = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */"
 
 /***/ }),
 
@@ -1032,127 +1147,6 @@ var LeafletComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_lat_lng_service__WEBPACK_IMPORTED_MODULE_3__["LatLngService"]])
     ], LeafletComponent);
     return LeafletComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/database.service.ts":
-/*!**********************************************!*\
-  !*** ./src/app/services/database.service.ts ***!
-  \**********************************************/
-/*! exports provided: DatabaseService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatabaseService", function() { return DatabaseService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/sqlite-porter/ngx */ "./node_modules/@ionic-native/sqlite-porter/ngx/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-
-
-
-
-
-
-
-var DatabaseService = /** @class */ (function () {
-    function DatabaseService(plt, sqlitePorter, sqlite, http) {
-        var _this = this;
-        this.plt = plt;
-        this.sqlitePorter = sqlitePorter;
-        this.sqlite = sqlite;
-        this.http = http;
-        this.dbReady = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"](false);
-        this.logs = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"]([]);
-        this.products = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"]([]);
-        this.plt.ready().then(function () {
-            _this.sqlite.create({
-                name: 'logs.db',
-                location: 'default'
-            })
-                .then(function (db) {
-                _this.database = db;
-                // this.seedDatabase();
-            });
-        });
-    }
-    /**
-     * seed db with dummy data
-     */
-    DatabaseService.prototype.seedDatabase = function () {
-        var _this = this;
-        this.http.get('assets/seed.sql', { responseType: 'text' })
-            .subscribe(function (sql) {
-            _this.sqlitePorter.importSqlToDb(_this.database, sql)
-                .then(function (_) {
-                _this.loadLogs();
-                _this.dbReady.next(true);
-            })
-                .catch(function (e) { return console.error(e); });
-        });
-    };
-    /**
-     * get db state
-     */
-    DatabaseService.prototype.getDatabaseState = function () {
-        return this.dbReady.asObservable();
-    };
-    /**
-     * get cuurent logs
-     */
-    DatabaseService.prototype.getLogs = function () {
-        return this.logs.asObservable();
-    };
-    /**
-     * load all current logs
-     */
-    DatabaseService.prototype.loadLogs = function () {
-        var _this = this;
-        return this.database.executeSql('SELECT * FROM log', []).then(function (data) {
-            var logs = [];
-            if (data.rows.length > 0) {
-                for (var i = 0; i < data.rows.length; i++) {
-                    logs.push({
-                        id: data.rows.item(i).id,
-                        name: data.rows.item(i).name
-                    });
-                }
-            }
-            _this.logs.next(logs);
-            console.log(logs);
-        });
-    };
-    /**
-     * @param description string
-     * add new log
-     */
-    DatabaseService.prototype.addLog = function (description) {
-        var _this = this;
-        return this.database.executeSql('INSERT INTO log (description) VALUES (?)', description).then(function (data) {
-            console.log(description + 'log added');
-            _this.loadLogs();
-        });
-    };
-    DatabaseService.ctorParameters = function () { return [
-        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"] },
-        { type: _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__["SQLitePorter"] },
-        { type: _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__["SQLite"] },
-        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
-    ]; };
-    DatabaseService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _ionic_native_sqlite_porter_ngx__WEBPACK_IMPORTED_MODULE_3__["SQLitePorter"], _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_5__["SQLite"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
-    ], DatabaseService);
-    return DatabaseService;
 }());
 
 
@@ -1386,44 +1380,57 @@ __webpack_require__.r(__webpack_exports__);
 
 var MeasurePointService = /** @class */ (function () {
     function MeasurePointService() {
-        this.directionList = [];
+        this.vZ = 0;
+        this.eX = 0;
+        this.eY = 0;
+        this.eZ = 0;
+        this.errorSpeed = 0;
+        this.errorSpeedZ = 0;
+        this.speed = 0;
+        this.speedChange = 0;
+        this.speedChangeZ = 0;
     }
     MeasurePointService.prototype.calSpeed = function (currentData) {
-        var unsignAccX = currentData.accX < 0 ? currentData.accX * (-1) : currentData.accX;
-        var unsignAccY = currentData.accY < 0 ? currentData.accY * (-1) : currentData.accY;
-        var unsignAccZ = currentData.accZ < 0 ? currentData.accZ * (-1) : currentData.accZ;
-        if (unsignAccX > unsignAccY) {
-            if (unsignAccX > unsignAccZ) {
-                var direction = currentData.accX > 0 ? true : false;
-                var axis = 1;
-                this.tempDirection = { direction: direction, axis: axis };
+        currentData = this.getAvaragePoint(currentData);
+        if (currentData.gpsSpeed < 0.5) {
+            this.setError(currentData);
+        }
+        currentData = this.reduceError(currentData);
+        var accelerationBoth = Math.sqrt((currentData.accX * currentData.accX) + (currentData.accY * currentData.accY) + (currentData.accZ * currentData.accZ));
+        this.speedChange = accelerationBoth * currentData.lapTime;
+        this.speedChangeZ = (currentData.accZ * -1) * currentData.lapTime;
+        if (currentData.accZ <= 0) {
+            /*
+            This time vihicle go ahead. so speed = speedPre + accelerationSpped. But accZ is -. So speed = speedPre - (-accelerationSpped)
+             */
+            if (currentData.gpsSpeed >= 9) {
+                this.vZ = currentData.currentSpeedZ + this.speedChangeZ - this.errorSpeedZ;
+                this.speed = currentData.currentSpeed + this.speedChange - this.errorSpeed;
             }
             else {
-                var direction = currentData.accZ > 0 ? true : false;
-                var axis = 3;
-                this.tempDirection = { direction: direction, axis: axis };
+                this.vZ = currentData.gpsSpeed + this.speedChangeZ;
+                this.speed = currentData.gpsSpeed + this.speedChange;
             }
         }
         else {
-            if (unsignAccY > unsignAccZ) {
-                var direction = currentData.accY > 0 ? true : false;
-                var axis = 2;
-                this.tempDirection = { direction: direction, axis: axis };
+            /*
+            This time vihicle go ahead. so speed = speedPre - accelerationSpped. But accZ is +. So speed = speedPre - (accelerationSpped)
+             */
+            if (currentData.gpsSpeed >= 9) {
+                this.vZ = currentData.currentSpeedZ - this.speedChangeZ - this.errorSpeedZ;
+                this.speed = currentData.currentSpeed - this.speedChange - this.errorSpeed;
             }
             else {
-                var direction = currentData.accZ > 0 ? true : false;
-                var axis = 3;
-                this.tempDirection = { direction: direction, axis: axis };
+                this.vZ = currentData.gpsSpeed - this.speedChangeZ;
+                this.speed = currentData.gpsSpeed - this.speedChange;
             }
         }
-        this.directionList = this.directionList.concat([this.tempDirection]);
-        currentData = this.getAvaragePoint(currentData);
-        this.acceleration = currentData.accX * currentData.accX +
-            currentData.accY * currentData.accX +
-            currentData.accZ * currentData.accX;
-        this.acceleration = Math.sqrt(this.acceleration);
-        var timeLap = ((currentData.accelerationFrequency) / 1000);
-        return this.acceleration * timeLap * 3.6; // * 3.6 to convert m/s to km/h
+        if (currentData.gpsSpeed < 9) {
+            this.setSpeedError(this.speed, this.vZ, currentData);
+        }
+        this.vZ = this.vZ < 0 ? 0 : this.vZ;
+        this.speed = this.speed < 0 ? 0 : this.speed;
+        return this.getPoint();
     };
     MeasurePointService.prototype.getAvaragePoint = function (currentData) {
         currentData.accX = currentData.accX / currentData.cnt;
@@ -1431,37 +1438,36 @@ var MeasurePointService = /** @class */ (function () {
         currentData.accZ = currentData.accZ / currentData.cnt;
         return currentData;
     };
-    MeasurePointService.prototype.getCurrentDirection = function () {
-        var xDirections = this.directionList.filter(function (xDirection) { return xDirection.axis === 1; });
-        var yDirections = this.directionList.filter(function (yDirection) { return yDirection.axis === 2; });
-        var zDirections = this.directionList.filter(function (zDirection) { return zDirection.axis === 3; });
-        if (xDirections.length > yDirections.length) {
-            if (xDirections.length > zDirections.length) {
-                var directionSignPluse = xDirections.filter(function (sign) { return sign.direction === true; });
-                var tempSign = directionSignPluse.length > (xDirections.length * 0.5) ? true : false;
-                return { direction: tempSign, axis: 1 };
-            }
-            else {
-                var directionSignPluse = zDirections.filter(function (sign) { return sign.direction === true; });
-                var tempSign = directionSignPluse.length > (zDirections.length * 0.5) ? true : false;
-                return { direction: tempSign, axis: 3 };
-            }
-        }
-        else {
-            if (yDirections.length > zDirections.length) {
-                var directionSignPluse = yDirections.filter(function (sign) { return sign.direction === true; });
-                var tempSign = directionSignPluse.length > (yDirections.length * 0.5) ? true : false;
-                return { direction: tempSign, axis: 2 };
-            }
-            else {
-                var directionSignPluse = zDirections.filter(function (sign) { return sign.direction === true; });
-                var tempSign = directionSignPluse.length > (zDirections.length * 0.5) ? true : false;
-                return { direction: tempSign, axis: 3 };
-            }
-        }
+    MeasurePointService.prototype.reduceError = function (currentData) {
+        currentData.accX -= this.eX;
+        currentData.accY -= this.eY;
+        currentData.accZ -= this.eZ;
+        return currentData;
     };
-    MeasurePointService.prototype.clearDirectionList = function () {
-        this.directionList = [];
+    MeasurePointService.prototype.setError = function (currentData) {
+        this.eX = (this.eX + currentData.accX) / 2;
+        this.eY = (this.eY + currentData.accY) / 2;
+        this.eZ = (this.eZ + currentData.accZ) / 2;
+    };
+    MeasurePointService.prototype.setSpeedError = function (speed, speedZ, currentData) {
+        var error = speed - currentData.gpsSpeed;
+        var errorZ = speedZ - currentData.gpsSpeed;
+        this.errorSpeed = (this.errorSpeed + error) / 2;
+        this.errorSpeedZ = (this.errorSpeed + errorZ) / 2;
+    };
+    MeasurePointService.prototype.getPoint = function () {
+        var point = {
+            currentSpeed: this.speed,
+            currentSpeedZ: this.vZ,
+            speedChange: this.speedChange,
+            speedChangeZ: this.speedChangeZ,
+            accErrorX: this.eX,
+            accErrorY: this.eY,
+            accErrorZ: this.eZ,
+            errorSpeed: this.errorSpeed,
+            errorSpeedZ: this.errorSpeedZ
+        };
+        return point;
     };
     MeasurePointService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1537,7 +1543,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/lahiru/Documents/Projects/DEENS/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\MSC\DEENS WORKING\DEENS\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -16,6 +16,12 @@ import { LeafletComponent } from './components/leaflet/leaflet.component';
 import { AccelerationComponent } from './components/acceleration/acceleration.component';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
+
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
+
  
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -26,9 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [
+  providers: [EmailComposer,
     StatusBar,
     SplashScreen,
+    AndroidPermissions,
+    Geolocation,
+    LocationAccuracy,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Gyroscope,
     DeviceMotion,

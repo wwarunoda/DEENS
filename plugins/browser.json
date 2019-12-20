@@ -45,6 +45,18 @@
     },
     "uk.co.workingedge.cordova.plugin.sqliteporter": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

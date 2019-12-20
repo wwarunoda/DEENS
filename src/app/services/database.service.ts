@@ -28,7 +28,7 @@ export class DatabaseService {
             })
                 .then((db: SQLiteObject) => {
                     this.database = db;
-                    // this.seedDatabase();
+                    this.seedDatabase();
                 });
         });
     }
@@ -88,7 +88,6 @@ export class DatabaseService {
      */
     addLog(description) {
         return this.database.executeSql('INSERT INTO log (description) VALUES (?)', description).then(data => {
-            console.log(description + 'log added');
             this.loadLogs();
         });
     }

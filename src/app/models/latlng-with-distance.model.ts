@@ -1,5 +1,5 @@
 import { LatLngModel } from './lat-lng.model';
 
-export class LatlngWithDistanceModel extends LatLngModel {
+export interface LatlngWithDistanceModel extends LatLngModel {
     distance: number;
 }

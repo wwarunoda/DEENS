@@ -1,4 +1,4 @@
-export class InstructionsModel {
+export interface InstructionsModel {
     direction: string;
     distance: number;
     exit: any;

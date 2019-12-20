@@ -298,6 +298,28 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.sqlitePorter"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+        "id": "cordova-plugin-email-composer.EmailComposer",
+        "pluginId": "cordova-plugin-email-composer",
+        "clobbers": [
+            "cordova.plugins.email"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email-composer/src/browser/EmailComposerProxy.js",
+        "id": "cordova-plugin-email-composer.EmailComposerProxy",
+        "pluginId": "cordova-plugin-email-composer",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "pluginId": "cordova-plugin-android-permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -315,7 +337,11 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-sqlite-storage": "3.4.0",
-    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.1"
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.1",
+    "cordova-plugin-email-composer": "0.9.2",
+    "cordova-plugin-geolocation": "4.0.2",
+    "cordova-plugin-android-permissions": "1.0.2",
+    "cordova-plugin-request-location-accuracy": "2.3.0"
 }
 // BOTTOM OF METADATA
 });

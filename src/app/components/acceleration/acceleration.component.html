@@ -1,23 +1,23 @@
-<h1>Acceleration Data</h1>
-<h2>X - {{accX}}</h2>
-<h2>Y - {{accY}}</h2>
-<h2>Z - {{accZ}}</h2>
-<h1>Speed: {{currentSpeed}}</h1>
+<h1>Speed: {{currentSpeed}} Km/h</h1>
 
-<!-- <ul>
-    <li *ngFor="let item of directionList; let i = index">
-      {{i}} {{item.direction}} {{item.axis}}
-    </li>
-  </ul> -->
+<h1>{{currentSpeedZ}} m/s</h1>
 
-<ion-input [(ngModel)]="description" placeholder="Enter Log"></ion-input>
+<ion-button expand="block" (click)="fixedErrorStop()">Start Navigating</ion-button>
+<ion-button expand="block" (click)="sendEmail()">Send Email</ion-button>
 
-<ion-button expand="block" (click)="addlog()">Add log</ion-button>
 
-<ion-list>
-  <ion-item *ngFor="let log of logs | async">
-    <ion-label>
-      <h2>{{log.id}}-{{ log.name }}</h2>
-    </ion-label>
-  </ion-item>
-</ion-list>
+<table>
+  <tr>
+    <td size="4">Longitude</td>
+    <td> {{gpsLatLng.lat}}</td>
+  </tr>
+  <tr>
+    <td size="4">Latitude</td>
+    <td>{{gpsLatLng.lng}}</td>
+  </tr>
+  <tr>
+    <td size="4">Speed</td>
+    <td>{{gpsSpeed}}</td>
+  </tr>
+</table>
+

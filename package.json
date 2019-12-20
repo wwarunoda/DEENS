@@ -19,11 +19,15 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "@ionic-native/android-permissions": "^5.18.0",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/device-motion": "^5.17.0",
+    "@ionic-native/email-composer": "^5.17.1",
     "@ionic-native/file": "^5.17.1",
     "@ionic-native/file-opener": "^5.17.1",
+    "@ionic-native/geolocation": "^5.18.0",
     "@ionic-native/gyroscope": "^5.17.0",
+    "@ionic-native/location-accuracy": "^5.18.0",
     "@ionic-native/native-storage": "^5.17.0",
     "@ionic-native/sensors": "^5.17.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -34,10 +38,14 @@
     "cordova": "^9.0.0",
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
+    "cordova-plugin-android-permissions": "^1.0.2",
     "cordova-plugin-device-motion": "^2.0.1",
+    "cordova-plugin-email-composer": "^0.9.2",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-file-opener2": "^2.2.1",
+    "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-gyroscope": "^0.1.4",
+    "cordova-plugin-request-location-accuracy": "^2.3.0",
     "cordova-plugin-sensors": "git+https://github.com/fabiorogeriosj/cordova-plugin-sensors.git",
     "cordova-sqlite-storage": "^3.4.0",
     "core-js": "^2.5.4",
@@ -99,7 +107,15 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       },
       "cordova-sqlite-storage": {},
-      "uk.co.workingedge.cordova.plugin.sqliteporter": {}
+      "uk.co.workingedge.cordova.plugin.sqliteporter": {},
+      "cordova-plugin-email-composer": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-request-location-accuracy": {
+        "PLAY_SERVICES_LOCATION_VERSION": "16.+"
+      }
     },
     "platforms": [
       "browser"
