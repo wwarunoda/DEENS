@@ -1,4 +1,5 @@
-<button (click)="leaflet()">Got To Map</button>
-<button (click)="acceleration()">Got To Acceleration</button>
+<ion-button *ngIf = isButtonView (click)="leaflet()">Car Navigate</ion-button>
+<ion-button *ngIf = isButtonView (click)="work()">Work</ion-button>
+<ion-button *ngIf = isButtonView (click)="acceleration()">Got To Acceleration</ion-button>
 
 <router-outlet></router-outlet>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LeafletComponent } from './components/leaflet/leaflet.component';
 import { AccelerationComponent } from './components/acceleration/acceleration.component';
+import { WorkComponent } from './components/Work/work.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -9,6 +10,10 @@ const routes: Routes = [
   {
     path: 'leaflet',
     component: LeafletComponent
+  },
+  {
+    path: 'work',
+    component: WorkComponent
   },
   {
     path: 'acceleration',

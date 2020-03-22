@@ -89,4 +89,25 @@ export class LatLngCalculationsService {
     return {lat: lat2, lng: lon2};
   }
 
+  latlngFindByDistanceWithBrng(latlngWithDistance: LatlngWithDistanceModel, heading: number): LatLngModel {
+    let d = latlngWithDistance.distance / 1000; // convert meters to km
+    let lat1 = latlngWithDistance.lat;
+    let lon1 = latlngWithDistance.lng;
+    var R = 6371; // Radius of the earth in km
+    // var brng = 1.57 // Bearing is 90 degrees converted to radians.
+    const brng = this.deg2rad(heading);
+    lat1 = this.deg2rad(lat1); // Current lat point converted to radians
+    lon1 = this.deg2rad(lon1); // Current long point converted to radians
+
+    var lat2 = Math.asin( Math.sin(lat1)*Math.cos(d/R) +
+     Math.cos(lat1)*Math.sin(d/R)*Math.cos(brng));
+
+    var lon2 = lon1 + Math.atan2(Math.sin(brng)*Math.sin(d/R)*Math.cos(lat1),
+             Math.cos(d/R)-Math.sin(lat1)*Math.sin(lat2))
+
+    lat2 = this.rad2deg(lat2);
+    lon2 = this.rad2deg(lon2);
+    return {lat: lat2, lng: lon2};
+  }
+
 }

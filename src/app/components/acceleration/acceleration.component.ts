@@ -1,16 +1,17 @@
 
 import { OnInit, Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { Geolocation, GeolocationOptions } from '@ionic-native/geolocation/ngx';
+import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 
 import { Point } from '../../models/point.model';
 import { MeasurePointService } from '../../services/measure-point.service';
 import { Dev } from '../../services/database.service';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { CalculationLogModel } from '../../models/calculation-log.model';
-import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 import { LatLngModel } from '../../models/lat-lng.model';
+import { LatLngCalculationsService } from 'src/app/services/lat-lng-calculations.service';
 
 declare var sensors;
 
@@ -31,11 +32,17 @@ export class AccelerationComponent implements OnInit {
   logs: Dev[] = [];
   description: any;
   logList: CalculationLogModel[] = [];
-
+  count: number = 0;
   private cnt = 0;
   private bufferSize = 100;
   private accelerationFrequency = 20;
   private accelerationType = 'LINEAR_ACCELERATION';
+
+  options: GeolocationOptions = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  }
 
   previusSpeed: number = 0;
   previusSpeedX: number = 0;
@@ -56,15 +63,15 @@ export class AccelerationComponent implements OnInit {
   accErrorZ = 0;
 
   strtTime: Date;
+  previusTimeInMS: number;
 
   fixError: boolean = true;
   gpsSpeed = 0;
-  gpsLatLng: LatLngModel = {lat: 0, lng: 0}
+  gpsPreviusSpeed = 0;
+  gpsLatLng: LatLngModel = { lat: 0, lng: 0 }
   timetest: any;
-
-  options = {
-    timeout: 1000 
-  }
+  isGpsAccess: boolean = false;
+  isSetError:boolean = false;
 
   constructor(
     private platform: Platform,
@@ -72,7 +79,8 @@ export class AccelerationComponent implements OnInit {
     private emailComposer: EmailComposer,
     private androidPermissions: AndroidPermissions,
     private geolocation: Geolocation,
-    private locationAccuracy: LocationAccuracy
+    private locationAccuracy: LocationAccuracy,
+    private latlngCalService: LatLngCalculationsService
   ) {
     this.timetest = Date.now();
   }
@@ -84,14 +92,21 @@ export class AccelerationComponent implements OnInit {
     });
   }
 
-  fixedErrorStop() {
+ fixedErrorStop () {
     this.strtTime = new Date();
     this.fixError = false;
   }
 
+  gpsConfig() {
+    this.isGpsAccess = !this.isGpsAccess;
+    if(!this.isGpsAccess) {
+      this.isSetError = false;
+    }
+  }
+
   private onSensorChange() {
 
-     // Access acceleration
+    // Access acceleration
     sensors.enableSensor(this.accelerationType);
     setInterval(() => {
       sensors.getState((values) => {
@@ -100,8 +115,9 @@ export class AccelerationComponent implements OnInit {
         this.accY += values[1];
         this.accZ += values[2];
 
-        if (this.cnt >= this.bufferSize) {        
-         this.locationCalculation();
+        if (this.cnt >= this.bufferSize) {
+          this.locationCalculation();
+          this.gpsPreviusSpeed = this.gpsSpeed;
         }
       });
     }, this.accelerationFrequency);
@@ -109,18 +125,18 @@ export class AccelerationComponent implements OnInit {
   }
 
   private locationCalculation() {
-    let tempPoint: Point = this.getPoint();    
+    let tempPoint: Point = this.getPoint();
     this.resetAcc();
     let measureData = this.measurePointService.calSpeed(tempPoint);
     this.accErrorX = measureData.accErrorX;
     this.accErrorY = measureData.accErrorY;
     this.accErrorZ = measureData.accErrorZ;
-    if(!this.fixError) {      
+    if (!this.fixError) {
       this.currentSpeedZ = (measureData.currentSpeedZ * 3.6).toFixed(4);
       this.currentSpeed = (measureData.currentSpeed * 3.6).toFixed(4);
       this.previusSpeed = measureData.currentSpeed;
       this.previusSpeedZ = measureData.currentSpeedZ;
-      this.writePointLog(tempPoint, measureData); 
+      this.writePointLog(tempPoint, measureData);
     }
   }
 
@@ -133,12 +149,15 @@ export class AccelerationComponent implements OnInit {
       accY: this.accY,
       accZ: this.accZ,
       cnt: this.cnt,
-      lapTime: (this.accelerationFrequency * this.cnt * 0.001 ), // one cycle time in seconds
+      lapTime: (this.accelerationFrequency * this.cnt * 0.001), // one cycle time in seconds
       currentSpeed: this.previusSpeed,
       currentSpeedX: this.previusSpeedX,
       currentSpeedY: this.previusSpeedY,
       currentSpeedZ: this.previusSpeedZ,
-      gpsSpeed: this.gpsSpeed
+      gpsSpeed: this.gpsPreviusSpeed,
+      gpsCurrentSpeed: this.gpsSpeed,
+      isGPSEnable: this.isGpsAccess,
+      isSetError: this.isSetError
     }
     return point;
   }
@@ -157,11 +176,11 @@ export class AccelerationComponent implements OnInit {
       accErrorX: measureData.accErrorX,
       accErrorY: measureData.accErrorY,
       accErrorZ: measureData.accErrorZ,
-      speedChange: measureData.speedChange,
-      speedChangeZ: measureData.speedChangeZ,
-      errorSpeed: measureData.errorSpeed,
-      errorSpeedZ: measureData.errorSpeedZ,
-      gpsSpeed: this.gpsSpeed
+      speedChange: measureData.speedChange * 3.6,
+      speedChangeZ: measureData.speedChangeZ * 3.6,
+      errorSpeed: measureData.errorSpeed * 3.6,
+      errorSpeedZ: measureData.errorSpeedZ * 3.6,
+      gpsSpeed: this.gpsPreviusSpeed * 3.6
     };
     this.logList = [...this.logList, log];
   }
@@ -185,25 +204,25 @@ export class AccelerationComponent implements OnInit {
       body: logJson,
       isHtml: true
     }
-    this.emailComposer.isAvailable().then((available: boolean) =>{
-      if(available) {
+    this.emailComposer.isAvailable().then((available: boolean) => {
+      if (available) {
         this.emailComposer.open(email);
       }
-     });
+    });
   }
 
   /*******************************************************************************GPS  */
 
-   //Check if application having GPS access permission  
-   checkGPSPermission() {
+  //Check if application having GPS access permission  
+  checkGPSPermission() {
     this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION).then(
       result => {
         if (result.hasPermission) {
- 
+
           //If having permission show 'Turn On GPS' dialogue
           this.askToTurnOnGPS();
         } else {
- 
+
           //If not having permission ask for permission
           this.requestGPSPermission();
         }
@@ -213,11 +232,10 @@ export class AccelerationComponent implements OnInit {
       }
     );
   }
- 
+
   requestGPSPermission() {
     this.locationAccuracy.canRequest().then((canRequest: boolean) => {
       if (canRequest) {
-        console.log("4");
       } else {
         //Show 'GPS Permission Request' dialogue
         this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION)
@@ -234,7 +252,7 @@ export class AccelerationComponent implements OnInit {
       }
     });
   }
- 
+
   askToTurnOnGPS() {
     this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
       () => {
@@ -245,18 +263,26 @@ export class AccelerationComponent implements OnInit {
     );
   }
 
- 
+  setError() {
+    this.isSetError = !this.isSetError;
+    this.isGpsAccess = true;
+  }
   // Methos to get device accurate coordinates using device GPS
   getLocationCoordinates() {
-    this.geolocation.getCurrentPosition(this.options).then(() => {      
-    }).catch((error) => {
-      alert('Error getting location' + error);
+    this.geolocation.watchPosition(this.options).subscribe((resp) => {
+      const currentLocation: LatLngModel = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+      const distance = this.latlngCalService.getDistanceFromLatLon(this.gpsLatLng, currentLocation);
+      const currentTime = new Date().getTime();
+      if (distance > 0 && this.count > 10) {
+        const timeDifference = currentTime - this.previusTimeInMS;
+        this.gpsSpeed = distance / (timeDifference * 0.001);
+      } else {
+        this.gpsSpeed = 0;
+      }
+      this.previusTimeInMS = currentTime;
+      this.gpsLatLng = currentLocation;
+      this.count++;
     });
-
-    this.geolocation.watchPosition().subscribe((resp) => {
-      this.gpsLatLng = {lat: resp.coords.latitude, lng: resp.coords.longitude };
-      this.gpsSpeed = resp.coords.speed;
-    })
   }
 
 }

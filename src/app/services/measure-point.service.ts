@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Point } from '../models/point.model';
-import { Direction } from '../models/direction.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,47 +20,68 @@ export class MeasurePointService {
 
       currentData = this.getAvaragePoint(currentData);
 
-      if(currentData.gpsSpeed < 0.5) {
-        this.setError(currentData);
-      }
+      // currentData = this.reduceError(currentData);
 
-
-      currentData = this.reduceError(currentData);
-      
       const accelerationBoth = Math.sqrt((currentData.accX * currentData.accX) + (currentData.accY * currentData.accY) + (currentData.accZ * currentData.accZ));
       this.speedChange = accelerationBoth * currentData.lapTime;
-      this.speedChangeZ = (currentData.accZ * -1) * currentData.lapTime;
+      this.speedChangeZ = Math.sqrt(currentData.accZ * currentData.accZ) * currentData.lapTime;
       if(currentData.accZ <= 0) {
         /*
         This time vihicle go ahead. so speed = speedPre + accelerationSpped. But accZ is -. So speed = speedPre - (-accelerationSpped)
          */
-        if(currentData.gpsSpeed >= 9) {
-          this.vZ = currentData.currentSpeedZ + this.speedChangeZ - this.errorSpeedZ;
-          this.speed = currentData.currentSpeed + this.speedChange - this.errorSpeed;
+        if(!currentData.isGPSEnable) {
+          this.vZ = currentData.currentSpeedZ;
+          this.speed = currentData.currentSpeed;
         } else {
-          this.vZ = currentData.gpsSpeed + this.speedChangeZ;
-          this.speed = currentData.gpsSpeed + this.speedChange;
-        }        
+          this.vZ = currentData.gpsSpeed;
+          this.speed = currentData.gpsSpeed;
+        }
+        this.vZ += this.speedChangeZ;
+        this.speed += this.speedChange;
       } else {
         /*
         This time vihicle go ahead. so speed = speedPre - accelerationSpped. But accZ is +. So speed = speedPre - (accelerationSpped)
          */
-        if(currentData.gpsSpeed >= 9) {
-          this.vZ = currentData.currentSpeedZ - this.speedChangeZ - this.errorSpeedZ;
-          this.speed = currentData.currentSpeed - this.speedChange - this.errorSpeed;
+        if(!currentData.isGPSEnable) {
+          this.vZ = currentData.currentSpeedZ;
+          this.speed = currentData.currentSpeed;
         } else {
-          this.vZ = currentData.gpsSpeed - this.speedChangeZ;
-          this.speed = currentData.gpsSpeed - this.speedChange;
-        }         
+          this.vZ = currentData.gpsSpeed;
+          this.speed = currentData.gpsSpeed;
+        }
+        this.vZ -= this.speedChangeZ;
+        this.speed -= this.speedChange;
       } 
 
-      if(currentData.gpsSpeed < 9) {
+      if(currentData.isSetError) {
         this.setSpeedError(this.speed, this.vZ, currentData);
       }
+
+      // reduce errors
+      this.vZ -= this.errorSpeedZ;
+      this.speed -= this.errorSpeed;
+
       this.vZ = this.vZ < 0 ? 0 : this.vZ;
       this.speed = this.speed < 0 ? 0 : this.speed;
 
       return this.getPoint();
+  }
+
+  setSpeedError(calculatedSpeed: number, calculatedSpeedZ: number, currentData: Point) {
+    const speedDifference = calculatedSpeed - currentData.gpsCurrentSpeed;
+    const speedDifferenceZ = calculatedSpeedZ - currentData.gpsCurrentSpeed;
+
+    if(this.errorSpeed === 0) {
+      this.errorSpeed = speedDifference;
+    } else {
+      this.errorSpeed = (this.errorSpeed + speedDifference) / 2;
+    }
+
+    if(this.errorSpeedZ === 0) {
+      this.errorSpeedZ = speedDifferenceZ;
+    } else {
+      this.errorSpeedZ = (this.errorSpeed + speedDifferenceZ) / 2;
+    }
   }
 
   getAvaragePoint(currentData: Point): Point {
@@ -82,13 +102,6 @@ export class MeasurePointService {
     this.eX = (this.eX + currentData.accX) / 2;
     this.eY = (this.eY + currentData.accY) / 2;
     this.eZ = (this.eZ + currentData.accZ) / 2;
-  }
-
-  setSpeedError(speed: number, speedZ: number, currentData: Point) {
-    const error = speed - currentData.gpsSpeed;
-    const errorZ = speedZ - currentData.gpsSpeed;
-    this.errorSpeed = (this.errorSpeed + error) / 2;
-    this.errorSpeedZ = (this.errorSpeed + errorZ) / 2;
   }
 
  private getPoint(): Point {

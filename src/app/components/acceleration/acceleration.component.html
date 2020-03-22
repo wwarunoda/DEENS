@@ -1,8 +1,9 @@
-<h1>Speed: {{currentSpeed}} Km/h</h1>
-
-<h1>{{currentSpeedZ}} m/s</h1>
+<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h</p>
+<p>GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>
 
 <ion-button expand="block" (click)="fixedErrorStop()">Start Navigating</ion-button>
+<ion-button expand="block" (click)="gpsConfig()">GPS Config</ion-button>
+<ion-button expand="block" (click)="setError()">Set/Stop Error</ion-button>
 <ion-button expand="block" (click)="sendEmail()">Send Email</ion-button>
 
 
@@ -18,6 +19,10 @@
   <tr>
     <td size="4">Speed</td>
     <td>{{gpsSpeed}}</td>
+  </tr>
+  <tr>
+    <td size="4">Count</td>
+    <td>{{count}}</td>
   </tr>
 </table>
 

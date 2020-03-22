@@ -1,7 +1,8 @@
-<button (click)="resetLocations()">Reset Locations</button>
-<button (click)="goThroughLine()">Quick path follower</button>
-<label>Speed</label>
-<input [(ngModel)]="vehicleSpeed">
-<button (click)="fallowThePath()">Follow the path by given speed</button>
-<p>Total passed distance is - {{distanceCompletedKm}}</p>
+<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>
+<ion-button size="small" (click)="fixedErrorStop()">Start Navigating</ion-button>
+<ion-button size="small" (click)="gpsConfig()">GPS Config</ion-button>
+<ion-button size="small" (click)="setError()">Set/Stop Error</ion-button>
+<ion-button size="small" (click)="sendEmail()">Send Email</ion-button>
+<ion-button size="small" (click)="fallowThePath()">Follow the path</ion-button>
+<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>
 <div id="map"></div>

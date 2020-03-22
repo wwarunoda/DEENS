@@ -434,36 +434,284 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/app.component.html":
-/*!**************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/app.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/components/acceleration/acceleration.component.html":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/components/acceleration/acceleration.component.html ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Speed: {{currentSpeed}} Km/h</h1>\r\n\r\n<h1>{{currentSpeedZ}} m/s</h1>\r\n\r\n<ion-button expand=\"block\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button expand=\"block\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n\r\n\r\n<table>\r\n  <tr>\r\n    <td size=\"4\">Longitude</td>\r\n    <td> {{gpsLatLng.lat}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Latitude</td>\r\n    <td>{{gpsLatLng.lng}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Speed</td>\r\n    <td>{{gpsSpeed}}</td>\r\n  </tr>\r\n</table>\r\n\r\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/components/leaflet/leaflet.component.html":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/components/leaflet/leaflet.component.html ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/Work/work.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/Work/work.component.html ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<button (click)=\"resetLocations()\">Reset Locations</button>\r\n<button (click)=\"goThroughLine()\">Quick path follower</button>\r\n<label>Speed</label>\r\n<input [(ngModel)]=\"vehicleSpeed\">\r\n<button (click)=\"fallowThePath()\">Follow the path by given speed</button>\r\n<p>Total passed distance is - {{distanceCompletedKm}}</p>\r\n<div id=\"map\"></div>\r\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n<p>Compass:- {{compassHeading}}</p>\r\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\r\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\r\n<div id=\"map\"></div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/acceleration/acceleration.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/acceleration/acceleration.component.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h</p>\r\n<p>GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n\r\n<ion-button expand=\"block\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button expand=\"block\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button expand=\"block\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button expand=\"block\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n\r\n\r\n<table>\r\n  <tr>\r\n    <td size=\"4\">Longitude</td>\r\n    <td> {{gpsLatLng.lat}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Latitude</td>\r\n    <td>{{gpsLatLng.lng}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Speed</td>\r\n    <td>{{gpsSpeed}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Count</td>\r\n    <td>{{count}}</td>\r\n  </tr>\r\n</table>\r\n\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/leaflet/leaflet.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/leaflet/leaflet.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\r\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\r\n<div id=\"map\"></div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/tslib/tslib.es6.js":
+/*!*****************************************!*\
+  !*** ./node_modules/tslib/tslib.es6.js ***!
+  \*****************************************/
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
 
 /***/ }),
 
@@ -482,6 +730,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _components_leaflet_leaflet_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/leaflet/leaflet.component */ "./src/app/components/leaflet/leaflet.component.ts");
 /* harmony import */ var _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/acceleration/acceleration.component */ "./src/app/components/acceleration/acceleration.component.ts");
+/* harmony import */ var _components_Work_work_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Work/work.component */ "./src/app/components/Work/work.component.ts");
+
 
 
 
@@ -493,6 +743,10 @@ const routes = [
     {
         path: 'leaflet',
         component: _components_leaflet_leaflet_component__WEBPACK_IMPORTED_MODULE_3__["LeafletComponent"]
+    },
+    {
+        path: 'work',
+        component: _components_Work_work_component__WEBPACK_IMPORTED_MODULE_5__["WorkComponent"]
     },
     {
         path: 'acceleration',
@@ -518,10 +772,12 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!************************************!*\
   !*** ./src/app/app.component.scss ***!
   \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXE1TQ1xcREVFTlMgV09SS0lOR1xcREVFTlMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXE1TQ1xcREVFTlMgV09SS0lOR1xcREVFTlMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */");
 
 /***/ }),
 
@@ -567,8 +823,8 @@ AppComponent.ctorParameters = () => [
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
-        styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
         _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
@@ -609,7 +865,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
 /* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 /* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _components_Work_work_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/Work/work.component */ "./src/app/components/Work/work.component.ts");
+
+
 
 
 
@@ -638,15 +898,17 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
             _components_leaflet_leaflet_component__WEBPACK_IMPORTED_MODULE_12__["LeafletComponent"],
-            _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__["AccelerationComponent"]
+            _components_acceleration_acceleration_component__WEBPACK_IMPORTED_MODULE_13__["AccelerationComponent"],
+            _components_Work_work_component__WEBPACK_IMPORTED_MODULE_22__["WorkComponent"]
         ],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_20__["HttpClientModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientModule"]],
         providers: [_ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_16__["EmailComposer"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
             _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_17__["AndroidPermissions"],
             _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_18__["Geolocation"],
+            _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_20__["DeviceOrientation"],
             _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_19__["LocationAccuracy"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
             _ionic_native_gyroscope_ngx__WEBPACK_IMPORTED_MODULE_10__["Gyroscope"],
@@ -662,14 +924,441 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/components/Work/work.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/components/Work/work.component.css ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9Xb3JrL3dvcmsuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL1dvcmsvd29yay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/components/Work/work.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/components/Work/work.component.ts ***!
+  \***************************************************/
+/*! exports provided: WorkComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkComponent", function() { return WorkComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
+/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
+/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! leaflet-routing-machine */ "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js");
+/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/internal/observable/timer */ "./node_modules/rxjs/internal/observable/timer.js");
+/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../services/lat-lng.service */ "./src/app/services/lat-lng.service.ts");
+/* harmony import */ var _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../services/measure-point.service.js */ "./src/app/services/measure-point.service.js");
+/* harmony import */ var _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/lat-lng-calculations.service.js */ "./src/app/services/lat-lng-calculations.service.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+let WorkComponent = class WorkComponent {
+    /****************************************END **********************************************************/
+    constructor(platform, measurePointService, emailComposer, androidPermissions, geolocation, locationAccuracy, latlngCalService, latLngService, deviceOrientation) {
+        this.platform = platform;
+        this.measurePointService = measurePointService;
+        this.emailComposer = emailComposer;
+        this.androidPermissions = androidPermissions;
+        this.geolocation = geolocation;
+        this.locationAccuracy = locationAccuracy;
+        this.latlngCalService = latlngCalService;
+        this.latLngService = latLngService;
+        this.deviceOrientation = deviceOrientation;
+        this.vehicleSpeed = 0;
+        this.distanceCompletedKm = 0;
+        this.distanceCalculatorIterationPeriod = 100;
+        this.pathFallowerIterationPeriod = 10;
+        /*************************************** Acceleration local variables *********************************/
+        this.logs = [];
+        this.logList = [];
+        this.count = 0;
+        this.cnt = 0;
+        this.bufferSize = 100;
+        this.accelerationFrequency = 20;
+        this.accelerationType = 'LINEAR_ACCELERATION';
+        this.options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+        this.compassOptions = {
+            frequency: 1000
+        };
+        this.previusSpeed = 0;
+        this.previusSpeedX = 0;
+        this.previusSpeedY = 0;
+        this.previusSpeedZ = 0;
+        this.currentSpeed = '0';
+        this.currentSpeedX = '0';
+        this.currentSpeedY = '0';
+        this.currentSpeedZ = '0';
+        this.accX = 0;
+        this.accY = 0;
+        this.accZ = 0;
+        this.accErrorX = 0;
+        this.accErrorY = 0;
+        this.accErrorZ = 0;
+        this.compassHeading = 0;
+        this.fixError = true;
+        this.gpsSpeed = 0;
+        this.gpsPreviusSpeed = 0;
+        this.gpsLatLng = { lat: 0, lng: 0 };
+        this.isGpsAccess = false;
+        this.isSetError = false;
+        this.timetest = Date.now();
+    }
+    ngOnInit() {
+        // initialize start values
+        this.initialLonLat = {
+            lat: 6.9,
+            lng: 81
+        };
+        this.initialForcus = 9;
+        this.platform.ready().then(() => {
+            this.onSensorChange();
+            this.checkGPSPermission();
+            // Get the device current compass heading
+            this.deviceOrientation.getCurrentHeading().then((data) => {
+                this.compassData = data;
+            });
+            // Watch the device compass heading change
+            var subscription = this.deviceOrientation.watchHeading(this.compassOptions).subscribe((data) => {
+                this.compassData = data;
+                this.compassHeading = data.trueHeading;
+            });
+        });
+    }
+    /*
+    Reset map
+    */
+    resetLocations() {
+        this.map.remove();
+        this.initializeMap(this.gpsLatLng);
+        this.startMarker = null;
+    }
+    /*
+    Follow the path according to the given speed
+    */
+    fallowThePath() {
+        // calculate total coordinations for tempary use only
+        let completeCoordinations;
+        let iteration = 0;
+        let previusCompletedDistance = 0;
+        let temparyMarker = [];
+        temparyMarker = [...temparyMarker, L.marker([this.startLonLat.lat, this.startLonLat.lng])];
+        this.getWorkDistanceCompleted();
+        const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_9__["timer"])(0, this.pathFallowerIterationPeriod);
+        const subscription = everySecond.subscribe(() => {
+            const distancdGap = (this.distanceCompletedKm - previusCompletedDistance) * 1000;
+            const latlng = temparyMarker[iteration].getLatLng();
+            completeCoordinations = { lat: latlng.lat, lng: latlng.lng, distance: distancdGap };
+            const currentLocation = this.latlngCalService.latlngFindByDistanceWithBrng(completeCoordinations, this.compassHeading);
+            temparyMarker = [...temparyMarker, L.marker([currentLocation.lat, currentLocation.lng]).addTo(this.map)];
+            if (iteration > 0) {
+                this.map.removeLayer(temparyMarker[iteration - 1]);
+            }
+            iteration++;
+            previusCompletedDistance = this.distanceCompletedKm;
+        });
+    }
+    /*
+    Go through the route line
+    */
+    goThroughLine() {
+        const coordinateList = this.waypoints._line._route.coordinates;
+        let temparyMarker = [];
+        let intervalValue = 0; // in milliseconds
+        let index = 0;
+        let iteration = 1;
+        coordinateList.forEach(item => {
+            // calculate point in xy space
+            intervalValue = 10 * iteration;
+            setTimeout(() => {
+                temparyMarker = [...temparyMarker, L.marker([item.lat, item.lng]).addTo(this.map)];
+                if (index > 0) {
+                    this.map.removeLayer(temparyMarker[index - 1]);
+                }
+                index++;
+            }, intervalValue);
+            iteration++;
+        });
+    }
+    initializeMap(latLng) {
+        // this.map = L.map('map').setView([this.initialLonLat.lat, this.initialLonLat.lng], this.initialForcus);
+        this.map = L.map('map').setView([latLng.lat, latLng.lng], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(this.map);
+        this.setMarkersAndGetNavigations(this.map);
+        // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(this.map);
+    }
+    /*
+    Get map on click first location as start location and second location as end location
+    Enable user to drag and drop both locations after select
+    */
+    setMarkersAndGetNavigations(map) {
+        map.on('click ', function mapClickListen(e) {
+            if (!this.startMarker) {
+                // get start location
+                const pos = e.latlng;
+                this.startLonLat = pos;
+                this.startMarker = L.marker(pos, {
+                    draggable: true
+                });
+                this.startMarker.on('drag', function (e) {
+                    this.startLonLat = e.latlng;
+                });
+                this.startMarker.addTo(map);
+            }
+        }.bind(this));
+    }
+    getWorkDistanceCompleted() {
+        const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_9__["timer"])(0, this.distanceCalculatorIterationPeriod);
+        const subscription = everySecond.subscribe(() => {
+            this.distanceCompletedKm += Number(this.currentSpeed) * (this.distanceCalculatorIterationPeriod / (1000 * 60 * 60));
+        });
+    }
+    /******************** Accelerometer methods ******************************************************************/
+    fixedErrorStop() {
+        this.strtTime = new Date();
+        this.fixError = false;
+    }
+    gpsConfig() {
+        this.isGpsAccess = !this.isGpsAccess;
+        if (!this.isGpsAccess) {
+            this.isSetError = false;
+        }
+    }
+    onSensorChange() {
+        // Access acceleration
+        sensors.enableSensor(this.accelerationType);
+        setInterval(() => {
+            sensors.getState((values) => {
+                this.cnt++;
+                this.accX += values[0];
+                this.accY += values[1];
+                this.accZ += values[2];
+                if (this.cnt >= this.bufferSize) {
+                    this.locationCalculation();
+                    this.gpsPreviusSpeed = this.gpsSpeed;
+                }
+            });
+        }, this.accelerationFrequency);
+    }
+    locationCalculation() {
+        const tempPoint = this.getPoint();
+        this.resetAcc();
+        const measureData = this.measurePointService.calSpeed(tempPoint);
+        this.accErrorX = measureData.accErrorX;
+        this.accErrorY = measureData.accErrorY;
+        this.accErrorZ = measureData.accErrorZ;
+        if (!this.fixError) {
+            this.currentSpeedZ = (measureData.currentSpeedZ * 3.6).toFixed(4);
+            this.currentSpeed = (measureData.currentSpeed * 3.6).toFixed(4);
+            this.previusSpeed = measureData.currentSpeed;
+            this.previusSpeedZ = measureData.currentSpeedZ;
+            this.writePointLog(tempPoint, measureData);
+        }
+    }
+    /* returrns parameters, using buffer: average acceleration
+      since last call of getPoint().
+    */
+    getPoint() {
+        const point = {
+            accX: this.accX,
+            accY: this.accY,
+            accZ: this.accZ,
+            cnt: this.cnt,
+            lapTime: (this.accelerationFrequency * this.cnt * 0.001),
+            currentSpeed: this.previusSpeed,
+            currentSpeedX: this.previusSpeedX,
+            currentSpeedY: this.previusSpeedY,
+            currentSpeedZ: this.previusSpeedZ,
+            gpsSpeed: this.gpsPreviusSpeed,
+            gpsCurrentSpeed: this.gpsSpeed,
+            isGPSEnable: this.isGpsAccess,
+            isSetError: this.isSetError
+        };
+        return point;
+    }
+    /**
+     * add log to db
+     */
+    writePointLog(point, measureData) {
+        const log = {
+            accX: point.accX / point.cnt,
+            accY: point.accY / point.cnt,
+            accZ: point.accZ / point.cnt,
+            currentSpeedZ: measureData.currentSpeedZ * -3.6,
+            currentSpeed: measureData.currentSpeed * 3.6,
+            startTime: this.strtTime,
+            accErrorX: measureData.accErrorX,
+            accErrorY: measureData.accErrorY,
+            accErrorZ: measureData.accErrorZ,
+            speedChange: measureData.speedChange * 3.6,
+            speedChangeZ: measureData.speedChangeZ * 3.6,
+            errorSpeed: measureData.errorSpeed * 3.6,
+            errorSpeedZ: measureData.errorSpeedZ * 3.6,
+            gpsSpeed: this.gpsPreviusSpeed * 3.6
+        };
+        this.logList = [...this.logList, log];
+    }
+    resetAcc() {
+        this.accX = 0;
+        this.accY = 0;
+        this.accZ = 0;
+        this.cnt = 0;
+    }
+    sendEmail() {
+        const logJson = JSON.stringify(this.logList);
+        const email = {
+            to: 'arunoda89@gmail.com',
+            cc: 'arunoda.17@cse.mrt.ac.lk',
+            bcc: [],
+            attachments: [],
+            subject: 'DEENS',
+            body: logJson,
+            isHtml: true
+        };
+        this.emailComposer.isAvailable().then((available) => {
+            if (available) {
+                this.emailComposer.open(email);
+            }
+        });
+        this.resetLocations();
+    }
+    /*******************************************************************************GPS  */
+    // Check if application having GPS access permission
+    checkGPSPermission() {
+        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION).then(result => {
+            if (result.hasPermission) {
+                // If having permission show 'Turn On GPS' dialogue
+                this.askToTurnOnGPS();
+            }
+            else {
+                // If not having permission ask for permission
+                this.requestGPSPermission();
+            }
+        }, err => {
+            alert(err);
+        });
+    }
+    requestGPSPermission() {
+        this.locationAccuracy.canRequest().then((canRequest) => {
+            if (canRequest) {
+            }
+            else {
+                // Show 'GPS Permission Request' dialogue
+                this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION)
+                    .then(() => {
+                    // call method to turn on GPS
+                    this.askToTurnOnGPS();
+                }, error => {
+                    // Show alert if user click on 'No Thanks'
+                    alert('requestPermission Error requesting location permissions ' + error);
+                });
+            }
+        });
+    }
+    askToTurnOnGPS() {
+        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(() => {
+            // When GPS Turned ON call method to get Accurate location coordinates
+            this.getLocationCoordinates();
+        }, error => alert('Error requesting location permissions ' + JSON.stringify(error)));
+    }
+    setError() {
+        this.isSetError = !this.isSetError;
+        this.isGpsAccess = true;
+    }
+    // Methos to get device accurate coordinates using device GPS
+    getLocationCoordinates() {
+        this.geolocation.watchPosition(this.options).subscribe((resp) => {
+            const currentLocation = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+            const distance = this.latlngCalService.getDistanceFromLatLon(this.gpsLatLng, currentLocation);
+            const currentTime = new Date().getTime();
+            if (distance > 0 && this.count > 10) {
+                const timeDifference = currentTime - this.previusTimeInMS;
+                this.gpsSpeed = distance / (timeDifference * 0.001);
+            }
+            else {
+                this.gpsSpeed = 0;
+            }
+            this.previusTimeInMS = currentTime;
+            if (this.gpsLatLng.lat === 0) {
+                this.initializeMap(currentLocation);
+            }
+            this.gpsLatLng = currentLocation;
+            this.count++;
+        });
+    }
+};
+WorkComponent.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"] },
+    { type: _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_11__["MeasurePointService"] },
+    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"] },
+    { type: _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"] },
+    { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"] },
+    { type: _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__["LocationAccuracy"] },
+    { type: _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_12__["LatLngCalculationsService"] },
+    { type: _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_10__["LatLngService"] },
+    { type: _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_7__["DeviceOrientation"] }
+];
+WorkComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-work',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./work.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/Work/work.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./work.component.css */ "./src/app/components/Work/work.component.css")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"],
+        _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_11__["MeasurePointService"],
+        _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"],
+        _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"],
+        _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"],
+        _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__["LocationAccuracy"],
+        _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_12__["LatLngCalculationsService"],
+        _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_10__["LatLngService"],
+        _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_7__["DeviceOrientation"]])
+], WorkComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/acceleration/acceleration.component.scss":
 /*!*********************************************************************!*\
   !*** ./src/app/components/acceleration/acceleration.component.scss ***!
   \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYWNjZWxlcmF0aW9uL2FjY2VsZXJhdGlvbi5jb21wb25lbnQuc2NzcyJ9 */"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYWNjZWxlcmF0aW9uL2FjY2VsZXJhdGlvbi5jb21wb25lbnQuc2NzcyJ9 */");
 
 /***/ }),
 
@@ -686,11 +1375,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/measure-point.service */ "./src/app/services/measure-point.service.ts");
-/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
-/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
-/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
-/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var _services_measure_point_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/measure-point.service */ "./src/app/services/measure-point.service.ts");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var src_app_services_lat_lng_calculations_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/services/lat-lng-calculations.service */ "./src/app/services/lat-lng-calculations.service.ts");
+
 
 
 
@@ -700,13 +1391,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AccelerationComponent = class AccelerationComponent {
-    constructor(platform, measurePointService, emailComposer, androidPermissions, geolocation, locationAccuracy) {
+    constructor(platform, measurePointService, emailComposer, androidPermissions, geolocation, locationAccuracy, latlngCalService) {
         this.platform = platform;
         this.measurePointService = measurePointService;
         this.emailComposer = emailComposer;
         this.androidPermissions = androidPermissions;
         this.geolocation = geolocation;
         this.locationAccuracy = locationAccuracy;
+        this.latlngCalService = latlngCalService;
         /*
         declarations
         */
@@ -715,10 +1407,16 @@ let AccelerationComponent = class AccelerationComponent {
         */
         this.logs = [];
         this.logList = [];
+        this.count = 0;
         this.cnt = 0;
         this.bufferSize = 100;
         this.accelerationFrequency = 20;
         this.accelerationType = 'LINEAR_ACCELERATION';
+        this.options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
         this.previusSpeed = 0;
         this.previusSpeedX = 0;
         this.previusSpeedY = 0;
@@ -735,10 +1433,10 @@ let AccelerationComponent = class AccelerationComponent {
         this.accErrorZ = 0;
         this.fixError = true;
         this.gpsSpeed = 0;
+        this.gpsPreviusSpeed = 0;
         this.gpsLatLng = { lat: 0, lng: 0 };
-        this.options = {
-            timeout: 1000
-        };
+        this.isGpsAccess = false;
+        this.isSetError = false;
         this.timetest = Date.now();
     }
     ngOnInit() {
@@ -751,6 +1449,12 @@ let AccelerationComponent = class AccelerationComponent {
         this.strtTime = new Date();
         this.fixError = false;
     }
+    gpsConfig() {
+        this.isGpsAccess = !this.isGpsAccess;
+        if (!this.isGpsAccess) {
+            this.isSetError = false;
+        }
+    }
     onSensorChange() {
         // Access acceleration
         sensors.enableSensor(this.accelerationType);
@@ -762,6 +1466,7 @@ let AccelerationComponent = class AccelerationComponent {
                 this.accZ += values[2];
                 if (this.cnt >= this.bufferSize) {
                     this.locationCalculation();
+                    this.gpsPreviusSpeed = this.gpsSpeed;
                 }
             });
         }, this.accelerationFrequency);
@@ -795,7 +1500,10 @@ let AccelerationComponent = class AccelerationComponent {
             currentSpeedX: this.previusSpeedX,
             currentSpeedY: this.previusSpeedY,
             currentSpeedZ: this.previusSpeedZ,
-            gpsSpeed: this.gpsSpeed
+            gpsSpeed: this.gpsPreviusSpeed,
+            gpsCurrentSpeed: this.gpsSpeed,
+            isGPSEnable: this.isGpsAccess,
+            isSetError: this.isSetError
         };
         return point;
     }
@@ -813,11 +1521,11 @@ let AccelerationComponent = class AccelerationComponent {
             accErrorX: measureData.accErrorX,
             accErrorY: measureData.accErrorY,
             accErrorZ: measureData.accErrorZ,
-            speedChange: measureData.speedChange,
-            speedChangeZ: measureData.speedChangeZ,
-            errorSpeed: measureData.errorSpeed,
-            errorSpeedZ: measureData.errorSpeedZ,
-            gpsSpeed: this.gpsSpeed
+            speedChange: measureData.speedChange * 3.6,
+            speedChangeZ: measureData.speedChangeZ * 3.6,
+            errorSpeed: measureData.errorSpeed * 3.6,
+            errorSpeedZ: measureData.errorSpeedZ * 3.6,
+            gpsSpeed: this.gpsPreviusSpeed * 3.6
         };
         this.logList = [...this.logList, log];
     }
@@ -863,7 +1571,6 @@ let AccelerationComponent = class AccelerationComponent {
     requestGPSPermission() {
         this.locationAccuracy.canRequest().then((canRequest) => {
             if (canRequest) {
-                console.log("4");
             }
             else {
                 //Show 'GPS Permission Request' dialogue
@@ -884,38 +1591,51 @@ let AccelerationComponent = class AccelerationComponent {
             this.getLocationCoordinates();
         }, error => alert('Error requesting location permissions ' + JSON.stringify(error)));
     }
+    setError() {
+        this.isSetError = !this.isSetError;
+        this.isGpsAccess = true;
+    }
     // Methos to get device accurate coordinates using device GPS
     getLocationCoordinates() {
-        this.geolocation.getCurrentPosition(this.options).then(() => {
-        }).catch((error) => {
-            alert('Error getting location' + error);
-        });
-        this.geolocation.watchPosition().subscribe((resp) => {
-            this.gpsLatLng = { lat: resp.coords.latitude, lng: resp.coords.longitude };
-            this.gpsSpeed = resp.coords.speed;
+        this.geolocation.watchPosition(this.options).subscribe((resp) => {
+            const currentLocation = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+            const distance = this.latlngCalService.getDistanceFromLatLon(this.gpsLatLng, currentLocation);
+            const currentTime = new Date().getTime();
+            if (distance > 0 && this.count > 10) {
+                const timeDifference = currentTime - this.previusTimeInMS;
+                this.gpsSpeed = distance / (timeDifference * 0.001);
+            }
+            else {
+                this.gpsSpeed = 0;
+            }
+            this.previusTimeInMS = currentTime;
+            this.gpsLatLng = currentLocation;
+            this.count++;
         });
     }
 };
 AccelerationComponent.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
-    { type: _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"] },
-    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"] },
-    { type: _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"] },
-    { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__["Geolocation"] },
-    { type: _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__["LocationAccuracy"] }
+    { type: _services_measure_point_service__WEBPACK_IMPORTED_MODULE_6__["MeasurePointService"] },
+    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_7__["EmailComposer"] },
+    { type: _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_3__["AndroidPermissions"] },
+    { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_4__["Geolocation"] },
+    { type: _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_5__["LocationAccuracy"] },
+    { type: src_app_services_lat_lng_calculations_service__WEBPACK_IMPORTED_MODULE_8__["LatLngCalculationsService"] }
 ];
 AccelerationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-acceleration',
-        template: __webpack_require__(/*! raw-loader!./acceleration.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/acceleration/acceleration.component.html"),
-        styles: [__webpack_require__(/*! ./acceleration.component.scss */ "./src/app/components/acceleration/acceleration.component.scss")]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./acceleration.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/acceleration/acceleration.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./acceleration.component.scss */ "./src/app/components/acceleration/acceleration.component.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
-        _services_measure_point_service__WEBPACK_IMPORTED_MODULE_3__["MeasurePointService"],
-        _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"],
-        _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"],
-        _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_6__["Geolocation"],
-        _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_7__["LocationAccuracy"]])
+        _services_measure_point_service__WEBPACK_IMPORTED_MODULE_6__["MeasurePointService"],
+        _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_7__["EmailComposer"],
+        _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_3__["AndroidPermissions"],
+        _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_4__["Geolocation"],
+        _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_5__["LocationAccuracy"],
+        src_app_services_lat_lng_calculations_service__WEBPACK_IMPORTED_MODULE_8__["LatLngCalculationsService"]])
 ], AccelerationComponent);
 
 
@@ -926,10 +1646,12 @@ AccelerationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!**********************************************************!*\
   !*** ./src/app/components/leaflet/leaflet.component.css ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */");
 
 /***/ }),
 
@@ -944,24 +1666,84 @@ module.exports = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeafletComponent", function() { return LeafletComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet-routing-machine */ "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js");
-/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/lat-lng.service */ "./src/app/services/lat-lng.service.ts");
-/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/internal/observable/timer */ "./node_modules/rxjs/internal/observable/timer.js");
-/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+/* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
+/* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! leaflet-routing-machine */ "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js");
+/* harmony import */ var leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(leaflet_routing_machine__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/internal/observable/timer */ "./node_modules/rxjs/internal/observable/timer.js");
+/* harmony import */ var rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../services/lat-lng.service */ "./src/app/services/lat-lng.service.ts");
+/* harmony import */ var _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../services/measure-point.service.js */ "./src/app/services/measure-point.service.js");
+/* harmony import */ var _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../services/lat-lng-calculations.service.js */ "./src/app/services/lat-lng-calculations.service.js");
+
+
+
+
+
+
+
 
 
 
 
 
 let LeafletComponent = class LeafletComponent {
-    constructor(latLngService) {
+    /****************************************END **********************************************************/
+    constructor(platform, measurePointService, emailComposer, androidPermissions, geolocation, locationAccuracy, latlngCalService, latLngService) {
+        this.platform = platform;
+        this.measurePointService = measurePointService;
+        this.emailComposer = emailComposer;
+        this.androidPermissions = androidPermissions;
+        this.geolocation = geolocation;
+        this.locationAccuracy = locationAccuracy;
+        this.latlngCalService = latlngCalService;
         this.latLngService = latLngService;
         this.vehicleSpeed = 0;
         this.distanceCompletedKm = 0;
         this.distanceCalculatorIterationPeriod = 100;
         this.pathFallowerIterationPeriod = 10;
+        /*************************************** Acceleration local variables *********************************/
+        this.logs = [];
+        this.logList = [];
+        this.count = 0;
+        this.cnt = 0;
+        this.bufferSize = 100;
+        this.accelerationFrequency = 20;
+        this.accelerationType = 'LINEAR_ACCELERATION';
+        this.options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+        this.compassOptions = {
+            frequency: 1000
+        };
+        this.previusSpeed = 0;
+        this.previusSpeedX = 0;
+        this.previusSpeedY = 0;
+        this.previusSpeedZ = 0;
+        this.currentSpeed = '0';
+        this.currentSpeedX = '0';
+        this.currentSpeedY = '0';
+        this.currentSpeedZ = '0';
+        this.accX = 0;
+        this.accY = 0;
+        this.accZ = 0;
+        this.accErrorX = 0;
+        this.accErrorY = 0;
+        this.accErrorZ = 0;
+        this.compassHeading = 0;
+        this.fixError = true;
+        this.gpsSpeed = 0;
+        this.gpsPreviusSpeed = 0;
+        this.gpsLatLng = { lat: 0, lng: 0 };
+        this.isGpsAccess = false;
+        this.isSetError = false;
+        this.timetest = Date.now();
     }
     ngOnInit() {
         // initialize start values
@@ -971,6 +1753,10 @@ let LeafletComponent = class LeafletComponent {
         };
         this.initialForcus = 9;
         this.initializeMap();
+        this.platform.ready().then(() => {
+            this.onSensorChange();
+            this.checkGPSPermission();
+        });
     }
     /*
     Reset map
@@ -1002,7 +1788,7 @@ let LeafletComponent = class LeafletComponent {
         });
         // console.log(completeCoordinations);
         if (completeCoordinations.length > 0) {
-            const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_4__["timer"])(0, this.pathFallowerIterationPeriod);
+            const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_8__["timer"])(0, this.pathFallowerIterationPeriod);
             const subscription = everySecond.subscribe(() => {
                 const coordinate = completeCoordinations[iteration];
                 if (coordinate.distance <= (this.distanceCompletedKm * 1000)) {
@@ -1071,7 +1857,7 @@ let LeafletComponent = class LeafletComponent {
             }
             else if (this.startMarker && !this.endMarker) {
                 // get end location
-                var pos = e.latlng;
+                const pos = e.latlng;
                 this.endLogLat = pos;
                 this.endMarker = L.marker(pos, {
                     draggable: true
@@ -1102,28 +1888,322 @@ let LeafletComponent = class LeafletComponent {
     Get vehicle distance completed for current speed
     */
     getDistanceCompleted(totalDistance) {
-        const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_4__["timer"])(0, this.distanceCalculatorIterationPeriod);
+        const everySecond = Object(rxjs_internal_observable_timer__WEBPACK_IMPORTED_MODULE_8__["timer"])(0, this.distanceCalculatorIterationPeriod);
         const subscription = everySecond.subscribe(() => {
-            this.distanceCompletedKm += this.vehicleSpeed * (this.distanceCalculatorIterationPeriod / (1000 * 60 * 60));
+            this.distanceCompletedKm += Number(this.currentSpeed) * (this.distanceCalculatorIterationPeriod / (1000 * 60 * 60));
             if ((this.distanceCompletedKm * 1000) >= totalDistance) {
                 subscription.unsubscribe();
             }
         });
     }
+    /******************** Accelerometer methods ******************************************************************/
+    fixedErrorStop() {
+        this.strtTime = new Date();
+        this.fixError = false;
+    }
+    gpsConfig() {
+        this.isGpsAccess = !this.isGpsAccess;
+        if (!this.isGpsAccess) {
+            this.isSetError = false;
+        }
+    }
+    onSensorChange() {
+        // Access acceleration
+        sensors.enableSensor(this.accelerationType);
+        setInterval(() => {
+            sensors.getState((values) => {
+                this.cnt++;
+                this.accX += values[0];
+                this.accY += values[1];
+                this.accZ += values[2];
+                if (this.cnt >= this.bufferSize) {
+                    this.locationCalculation();
+                    this.gpsPreviusSpeed = this.gpsSpeed;
+                }
+            });
+        }, this.accelerationFrequency);
+    }
+    locationCalculation() {
+        const tempPoint = this.getPoint();
+        this.resetAcc();
+        const measureData = this.measurePointService.calSpeed(tempPoint);
+        this.accErrorX = measureData.accErrorX;
+        this.accErrorY = measureData.accErrorY;
+        this.accErrorZ = measureData.accErrorZ;
+        if (!this.fixError) {
+            this.currentSpeedZ = (measureData.currentSpeedZ * 3.6).toFixed(4);
+            this.currentSpeed = (measureData.currentSpeed * 3.6).toFixed(4);
+            this.previusSpeed = measureData.currentSpeed;
+            this.previusSpeedZ = measureData.currentSpeedZ;
+            this.writePointLog(tempPoint, measureData);
+        }
+    }
+    /* returrns parameters, using buffer: average acceleration
+      since last call of getPoint().
+    */
+    getPoint() {
+        const point = {
+            accX: this.accX,
+            accY: this.accY,
+            accZ: this.accZ,
+            cnt: this.cnt,
+            lapTime: (this.accelerationFrequency * this.cnt * 0.001),
+            currentSpeed: this.previusSpeed,
+            currentSpeedX: this.previusSpeedX,
+            currentSpeedY: this.previusSpeedY,
+            currentSpeedZ: this.previusSpeedZ,
+            gpsSpeed: this.gpsPreviusSpeed,
+            gpsCurrentSpeed: this.gpsSpeed,
+            isGPSEnable: this.isGpsAccess,
+            isSetError: this.isSetError
+        };
+        return point;
+    }
+    /**
+     * add log to db
+     */
+    writePointLog(point, measureData) {
+        const log = {
+            accX: point.accX / point.cnt,
+            accY: point.accY / point.cnt,
+            accZ: point.accZ / point.cnt,
+            currentSpeedZ: measureData.currentSpeedZ * -3.6,
+            currentSpeed: measureData.currentSpeed * 3.6,
+            startTime: this.strtTime,
+            accErrorX: measureData.accErrorX,
+            accErrorY: measureData.accErrorY,
+            accErrorZ: measureData.accErrorZ,
+            speedChange: measureData.speedChange * 3.6,
+            speedChangeZ: measureData.speedChangeZ * 3.6,
+            errorSpeed: measureData.errorSpeed * 3.6,
+            errorSpeedZ: measureData.errorSpeedZ * 3.6,
+            gpsSpeed: this.gpsPreviusSpeed * 3.6
+        };
+        this.logList = [...this.logList, log];
+    }
+    resetAcc() {
+        this.accX = 0;
+        this.accY = 0;
+        this.accZ = 0;
+        this.cnt = 0;
+    }
+    sendEmail() {
+        const logJson = JSON.stringify(this.logList);
+        const email = {
+            to: 'arunoda89@gmail.com',
+            cc: 'arunoda.17@cse.mrt.ac.lk',
+            bcc: [],
+            attachments: [],
+            subject: 'DEENS',
+            body: logJson,
+            isHtml: true
+        };
+        this.emailComposer.isAvailable().then((available) => {
+            if (available) {
+                this.emailComposer.open(email);
+            }
+        });
+        this.resetLocations();
+    }
+    /*******************************************************************************GPS  */
+    // Check if application having GPS access permission
+    checkGPSPermission() {
+        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION).then(result => {
+            if (result.hasPermission) {
+                // If having permission show 'Turn On GPS' dialogue
+                this.askToTurnOnGPS();
+            }
+            else {
+                // If not having permission ask for permission
+                this.requestGPSPermission();
+            }
+        }, err => {
+            alert(err);
+        });
+    }
+    requestGPSPermission() {
+        this.locationAccuracy.canRequest().then((canRequest) => {
+            if (canRequest) {
+            }
+            else {
+                // Show 'GPS Permission Request' dialogue
+                this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION)
+                    .then(() => {
+                    // call method to turn on GPS
+                    this.askToTurnOnGPS();
+                }, error => {
+                    // Show alert if user click on 'No Thanks'
+                    alert('requestPermission Error requesting location permissions ' + error);
+                });
+            }
+        });
+    }
+    askToTurnOnGPS() {
+        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(() => {
+            // When GPS Turned ON call method to get Accurate location coordinates
+            this.getLocationCoordinates();
+        }, error => alert('Error requesting location permissions ' + JSON.stringify(error)));
+    }
+    setError() {
+        this.isSetError = !this.isSetError;
+        this.isGpsAccess = true;
+    }
+    // Methos to get device accurate coordinates using device GPS
+    getLocationCoordinates() {
+        this.geolocation.watchPosition(this.options).subscribe((resp) => {
+            const currentLocation = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+            const distance = this.latlngCalService.getDistanceFromLatLon(this.gpsLatLng, currentLocation);
+            const currentTime = new Date().getTime();
+            if (distance > 0 && this.count > 10) {
+                const timeDifference = currentTime - this.previusTimeInMS;
+                this.gpsSpeed = distance / (timeDifference * 0.001);
+            }
+            else {
+                this.gpsSpeed = 0;
+            }
+            this.previusTimeInMS = currentTime;
+            this.gpsLatLng = currentLocation;
+            this.count++;
+        });
+    }
 };
 LeafletComponent.ctorParameters = () => [
-    { type: _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_3__["LatLngService"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"] },
+    { type: _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_10__["MeasurePointService"] },
+    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"] },
+    { type: _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"] },
+    { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"] },
+    { type: _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__["LocationAccuracy"] },
+    { type: _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_11__["LatLngCalculationsService"] },
+    { type: _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_9__["LatLngService"] }
 ];
 LeafletComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-leaflet',
-        template: __webpack_require__(/*! raw-loader!./leaflet.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/leaflet/leaflet.component.html"),
-        styles: [__webpack_require__(/*! ./leaflet.component.css */ "./src/app/components/leaflet/leaflet.component.css")]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./leaflet.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/leaflet/leaflet.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./leaflet.component.css */ "./src/app/components/leaflet/leaflet.component.css")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_lat_lng_service__WEBPACK_IMPORTED_MODULE_3__["LatLngService"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"],
+        _services_measure_point_service_js__WEBPACK_IMPORTED_MODULE_10__["MeasurePointService"],
+        _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_4__["EmailComposer"],
+        _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_5__["AndroidPermissions"],
+        _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"],
+        _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_6__["LocationAccuracy"],
+        _services_lat_lng_calculations_service_js__WEBPACK_IMPORTED_MODULE_11__["LatLngCalculationsService"],
+        _services_lat_lng_service__WEBPACK_IMPORTED_MODULE_9__["LatLngService"]])
 ], LeafletComponent);
 
 
+
+/***/ }),
+
+/***/ "./src/app/services/lat-lng-calculations.service.js":
+/*!**********************************************************!*\
+  !*** ./src/app/services/lat-lng-calculations.service.js ***!
+  \**********************************************************/
+/*! exports provided: LatLngCalculationsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LatLngCalculationsService", function() { return LatLngCalculationsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+var R = 6371000; // radius of earth in m
+let LatLngCalculationsService = class LatLngCalculationsService {
+    constructor() { }
+    getDestinationLatLong(latlngFirst, azimuth, distance) {
+        /* 'returns the lat an long of destination point
+        given the start lat, long, aziuth, and distance'''
+        R = 6378.1 #Radius of the Earth in km
+        */
+        let brng = this.deg2rad(azimuth); // Bearing is degrees converted to radians.
+        let d = distance / 1000; // Distance m converted to km
+        let lat1 = this.deg2rad(latlngFirst.lat); // Current dd lat point converted to radians
+        let lon1 = this.deg2rad(latlngFirst.lng); // Current dd long point converted to radians
+        let lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) + Math.cos(lat1) * Math.sin(d / R) * Math.cos(brng));
+        let lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(d / R) * Math.cos(lat1), Math.cos(d / R) - Math.sin(lat1) * Math.sin(lat2));
+        // convert back to degrees
+        lat2 = this.rad2deg(lat2);
+        lon2 = this.rad2deg(lon2);
+        return { lat: lat2, lng: lon2 };
+    }
+    calculateBearing(latlngFirst, latlngSecond) {
+        /* calculates the azimuth in degrees from start point to end point''' */
+        let startLat = this.deg2rad(latlngFirst.lat);
+        let startLong = this.deg2rad(latlngFirst.lng);
+        let endLat = this.deg2rad(latlngSecond.lat);
+        let endLong = this.deg2rad(latlngSecond.lng);
+        let dLong = endLong - startLong;
+        let dPhi = Math.log(Math.tan(endLat / 2.0 + Math.PI / 4.0) / Math.tan(startLat / 2.0 + Math.PI / 4.0));
+        if (dLong > Math.PI) {
+            if (dLong > 0.0)
+                dLong = -(2.0 * Math.PI - dLong);
+            else
+                dLong = (2.0 * Math.PI + dLong);
+        }
+        let bearing = (this.rad2deg(Math.atan2(dLong, dPhi)) + 360.0) % 360.0;
+        return bearing;
+    }
+    getDistanceFromLatLon(latlngFirst, latlngSecond) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(latlngSecond.lat - latlngFirst.lat); // deg2rad below
+        var dLon = this.deg2rad(latlngSecond.lng - latlngFirst.lng);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(latlngFirst.lat)) * Math.cos(this.deg2rad(latlngSecond.lat)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        return d * 1000; // Convert km to meters
+    }
+    deg2rad(deg) {
+        return deg * (Math.PI / 180);
+    }
+    rad2deg(rad) {
+        return rad * (180 / Math.PI);
+    }
+    latlngFindByDistance(latlngWithDistance) {
+        let d = latlngWithDistance.distance / 1000; // convert meters to km
+        let lat1 = latlngWithDistance.lat;
+        let lon1 = latlngWithDistance.lng;
+        var R = 6371; // Radius of the earth in km
+        var brng = 1.57; // Bearing is 90 degrees converted to radians.
+        lat1 = this.deg2rad(lat1); // Current lat point converted to radians
+        lon1 = this.deg2rad(lon1); // Current long point converted to radians
+        var lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) +
+            Math.cos(lat1) * Math.sin(d / R) * Math.cos(brng));
+        var lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(d / R) * Math.cos(lat1), Math.cos(d / R) - Math.sin(lat1) * Math.sin(lat2));
+        lat2 = this.rad2deg(lat2);
+        lon2 = this.rad2deg(lon2);
+        return { lat: lat2, lng: lon2 };
+    }
+    latlngFindByDistanceWithBrng(latlngWithDistance, heading) {
+        let d = latlngWithDistance.distance / 1000; // convert meters to km
+        let lat1 = latlngWithDistance.lat;
+        let lon1 = latlngWithDistance.lng;
+        var R = 6371; // Radius of the earth in km
+        // var brng = 1.57 // Bearing is 90 degrees converted to radians.
+        const brng = this.deg2rad(heading);
+        lat1 = this.deg2rad(lat1); // Current lat point converted to radians
+        lon1 = this.deg2rad(lon1); // Current long point converted to radians
+        var lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) +
+            Math.cos(lat1) * Math.sin(d / R) * Math.cos(brng));
+        var lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(d / R) * Math.cos(lat1), Math.cos(d / R) - Math.sin(lat1) * Math.sin(lat2));
+        lat2 = this.rad2deg(lat2);
+        lon2 = this.rad2deg(lon2);
+        return { lat: lat2, lng: lon2 };
+    }
+};
+LatLngCalculationsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], LatLngCalculationsService);
+
+//# sourceMappingURL=lat-lng-calculations.service.js.map
 
 /***/ }),
 
@@ -1200,6 +2280,22 @@ let LatLngCalculationsService = class LatLngCalculationsService {
         let lon1 = latlngWithDistance.lng;
         var R = 6371; // Radius of the earth in km
         var brng = 1.57; // Bearing is 90 degrees converted to radians.
+        lat1 = this.deg2rad(lat1); // Current lat point converted to radians
+        lon1 = this.deg2rad(lon1); // Current long point converted to radians
+        var lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) +
+            Math.cos(lat1) * Math.sin(d / R) * Math.cos(brng));
+        var lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(d / R) * Math.cos(lat1), Math.cos(d / R) - Math.sin(lat1) * Math.sin(lat2));
+        lat2 = this.rad2deg(lat2);
+        lon2 = this.rad2deg(lon2);
+        return { lat: lat2, lng: lon2 };
+    }
+    latlngFindByDistanceWithBrng(latlngWithDistance, heading) {
+        let d = latlngWithDistance.distance / 1000; // convert meters to km
+        let lat1 = latlngWithDistance.lat;
+        let lon1 = latlngWithDistance.lng;
+        var R = 6371; // Radius of the earth in km
+        // var brng = 1.57 // Bearing is 90 degrees converted to radians.
+        const brng = this.deg2rad(heading);
         lat1 = this.deg2rad(lat1); // Current lat point converted to radians
         lon1 = this.deg2rad(lon1); // Current long point converted to radians
         var lat2 = Math.asin(Math.sin(lat1) * Math.cos(d / R) +
@@ -1335,6 +2431,137 @@ LatLngService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/services/measure-point.service.js":
+/*!***************************************************!*\
+  !*** ./src/app/services/measure-point.service.js ***!
+  \***************************************************/
+/*! exports provided: MeasurePointService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeasurePointService", function() { return MeasurePointService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let MeasurePointService = class MeasurePointService {
+    constructor() {
+        this.vZ = 0;
+        this.eX = 0;
+        this.eY = 0;
+        this.eZ = 0;
+        this.errorSpeed = 0;
+        this.errorSpeedZ = 0;
+        this.speed = 0;
+        this.speedChange = 0;
+        this.speedChangeZ = 0;
+    }
+    calSpeed(currentData) {
+        currentData = this.getAvaragePoint(currentData);
+        // currentData = this.reduceError(currentData);
+        const accelerationBoth = Math.sqrt((currentData.accX * currentData.accX) + (currentData.accY * currentData.accY) + (currentData.accZ * currentData.accZ));
+        this.speedChange = accelerationBoth * currentData.lapTime;
+        this.speedChangeZ = Math.sqrt(currentData.accZ * currentData.accZ) * currentData.lapTime;
+        if (currentData.accZ <= 0) {
+            /*
+            This time vihicle go ahead. so speed = speedPre + accelerationSpped. But accZ is -. So speed = speedPre - (-accelerationSpped)
+             */
+            if (!currentData.isGPSEnable) {
+                this.vZ = currentData.currentSpeedZ;
+                this.speed = currentData.currentSpeed;
+            }
+            else {
+                this.vZ = currentData.gpsSpeed;
+                this.speed = currentData.gpsSpeed;
+            }
+            this.vZ += this.speedChangeZ;
+            this.speed += this.speedChange;
+        }
+        else {
+            /*
+            This time vihicle go ahead. so speed = speedPre - accelerationSpped. But accZ is +. So speed = speedPre - (accelerationSpped)
+             */
+            if (!currentData.isGPSEnable) {
+                this.vZ = currentData.currentSpeedZ;
+                this.speed = currentData.currentSpeed;
+            }
+            else {
+                this.vZ = currentData.gpsSpeed;
+                this.speed = currentData.gpsSpeed;
+            }
+            this.vZ -= this.speedChangeZ;
+            this.speed -= this.speedChange;
+        }
+        if (currentData.isSetError) {
+            this.setSpeedError(this.speed, this.vZ, currentData);
+        }
+        // reduce errors
+        this.vZ -= this.errorSpeedZ;
+        this.speed -= this.errorSpeed;
+        this.vZ = this.vZ < 0 ? 0 : this.vZ;
+        this.speed = this.speed < 0 ? 0 : this.speed;
+        return this.getPoint();
+    }
+    setSpeedError(calculatedSpeed, calculatedSpeedZ, currentData) {
+        const speedDifference = calculatedSpeed - currentData.gpsCurrentSpeed;
+        const speedDifferenceZ = calculatedSpeedZ - currentData.gpsCurrentSpeed;
+        if (this.errorSpeed === 0) {
+            this.errorSpeed = speedDifference;
+        }
+        else {
+            this.errorSpeed = (this.errorSpeed + speedDifference) / 2;
+        }
+        if (this.errorSpeedZ === 0) {
+            this.errorSpeedZ = speedDifferenceZ;
+        }
+        else {
+            this.errorSpeedZ = (this.errorSpeed + speedDifferenceZ) / 2;
+        }
+    }
+    getAvaragePoint(currentData) {
+        currentData.accX = currentData.accX / currentData.cnt;
+        currentData.accY = currentData.accY / currentData.cnt;
+        currentData.accZ = currentData.accZ / currentData.cnt;
+        return currentData;
+    }
+    reduceError(currentData) {
+        currentData.accX -= this.eX;
+        currentData.accY -= this.eY;
+        currentData.accZ -= this.eZ;
+        return currentData;
+    }
+    setError(currentData) {
+        this.eX = (this.eX + currentData.accX) / 2;
+        this.eY = (this.eY + currentData.accY) / 2;
+        this.eZ = (this.eZ + currentData.accZ) / 2;
+    }
+    getPoint() {
+        const point = {
+            currentSpeed: this.speed,
+            currentSpeedZ: this.vZ,
+            speedChange: this.speedChange,
+            speedChangeZ: this.speedChangeZ,
+            accErrorX: this.eX,
+            accErrorY: this.eY,
+            accErrorZ: this.eZ,
+            errorSpeed: this.errorSpeed,
+            errorSpeedZ: this.errorSpeedZ
+        };
+        return point;
+    }
+};
+MeasurePointService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], MeasurePointService);
+
+//# sourceMappingURL=measure-point.service.js.map
+
+/***/ }),
+
 /***/ "./src/app/services/measure-point.service.ts":
 /*!***************************************************!*\
   !*** ./src/app/services/measure-point.service.ts ***!
@@ -1363,45 +2590,65 @@ let MeasurePointService = class MeasurePointService {
     }
     calSpeed(currentData) {
         currentData = this.getAvaragePoint(currentData);
-        if (currentData.gpsSpeed < 0.5) {
-            this.setError(currentData);
-        }
-        currentData = this.reduceError(currentData);
+        // currentData = this.reduceError(currentData);
         const accelerationBoth = Math.sqrt((currentData.accX * currentData.accX) + (currentData.accY * currentData.accY) + (currentData.accZ * currentData.accZ));
         this.speedChange = accelerationBoth * currentData.lapTime;
-        this.speedChangeZ = (currentData.accZ * -1) * currentData.lapTime;
+        this.speedChangeZ = Math.sqrt(currentData.accZ * currentData.accZ) * currentData.lapTime;
         if (currentData.accZ <= 0) {
             /*
             This time vihicle go ahead. so speed = speedPre + accelerationSpped. But accZ is -. So speed = speedPre - (-accelerationSpped)
              */
-            if (currentData.gpsSpeed >= 9) {
-                this.vZ = currentData.currentSpeedZ + this.speedChangeZ - this.errorSpeedZ;
-                this.speed = currentData.currentSpeed + this.speedChange - this.errorSpeed;
+            if (!currentData.isGPSEnable) {
+                this.vZ = currentData.currentSpeedZ;
+                this.speed = currentData.currentSpeed;
             }
             else {
-                this.vZ = currentData.gpsSpeed + this.speedChangeZ;
-                this.speed = currentData.gpsSpeed + this.speedChange;
+                this.vZ = currentData.gpsSpeed;
+                this.speed = currentData.gpsSpeed;
             }
+            this.vZ += this.speedChangeZ;
+            this.speed += this.speedChange;
         }
         else {
             /*
             This time vihicle go ahead. so speed = speedPre - accelerationSpped. But accZ is +. So speed = speedPre - (accelerationSpped)
              */
-            if (currentData.gpsSpeed >= 9) {
-                this.vZ = currentData.currentSpeedZ - this.speedChangeZ - this.errorSpeedZ;
-                this.speed = currentData.currentSpeed - this.speedChange - this.errorSpeed;
+            if (!currentData.isGPSEnable) {
+                this.vZ = currentData.currentSpeedZ;
+                this.speed = currentData.currentSpeed;
             }
             else {
-                this.vZ = currentData.gpsSpeed - this.speedChangeZ;
-                this.speed = currentData.gpsSpeed - this.speedChange;
+                this.vZ = currentData.gpsSpeed;
+                this.speed = currentData.gpsSpeed;
             }
+            this.vZ -= this.speedChangeZ;
+            this.speed -= this.speedChange;
         }
-        if (currentData.gpsSpeed < 9) {
+        if (currentData.isSetError) {
             this.setSpeedError(this.speed, this.vZ, currentData);
         }
+        // reduce errors
+        this.vZ -= this.errorSpeedZ;
+        this.speed -= this.errorSpeed;
         this.vZ = this.vZ < 0 ? 0 : this.vZ;
         this.speed = this.speed < 0 ? 0 : this.speed;
         return this.getPoint();
+    }
+    setSpeedError(calculatedSpeed, calculatedSpeedZ, currentData) {
+        const speedDifference = calculatedSpeed - currentData.gpsCurrentSpeed;
+        const speedDifferenceZ = calculatedSpeedZ - currentData.gpsCurrentSpeed;
+        if (this.errorSpeed === 0) {
+            this.errorSpeed = speedDifference;
+        }
+        else {
+            this.errorSpeed = (this.errorSpeed + speedDifference) / 2;
+        }
+        if (this.errorSpeedZ === 0) {
+            this.errorSpeedZ = speedDifferenceZ;
+        }
+        else {
+            this.errorSpeedZ = (this.errorSpeed + speedDifferenceZ) / 2;
+        }
     }
     getAvaragePoint(currentData) {
         currentData.accX = currentData.accX / currentData.cnt;
@@ -1419,12 +2666,6 @@ let MeasurePointService = class MeasurePointService {
         this.eX = (this.eX + currentData.accX) / 2;
         this.eY = (this.eY + currentData.accY) / 2;
         this.eZ = (this.eZ + currentData.accZ) / 2;
-    }
-    setSpeedError(speed, speedZ, currentData) {
-        const error = speed - currentData.gpsSpeed;
-        const errorZ = speedZ - currentData.gpsSpeed;
-        this.errorSpeed = (this.errorSpeed + error) / 2;
-        this.errorSpeedZ = (this.errorSpeed + errorZ) / 2;
     }
     getPoint() {
         const point = {
@@ -1462,9 +2703,11 @@ MeasurePointService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+
 const environment = {
     production: false
 };
@@ -1489,18 +2732,20 @@ const environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(err => console.log(err));
 
 

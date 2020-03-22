@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var device;
 
@@ -10,6 +10,7 @@ declare var device;
 })
 export class HomePage {
 
+  isButtonView = true;
   constructor(private router: Router) { }
 
   // tslint:disable-next-line: use-lifecycle-interface
@@ -21,10 +22,17 @@ export class HomePage {
   
   leaflet() {
     this.router.navigate(['leaflet']);
+    this.isButtonView = false;
+  }
+
+  work() {
+    this.router.navigate(['work']);
+    this.isButtonView = false;
   }
 
   acceleration() {
     this.router.navigate(['acceleration']);
+    this.isButtonView = false;
   }
 
 }

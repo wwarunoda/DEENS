@@ -314,6 +314,30 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.locationAccuracy"
       ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.CompassError",
+      "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "CompassError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.CompassHeading",
+      "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "CompassHeading"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.compass",
+      "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "navigator.compass"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -333,6 +357,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-email-composer": "0.9.2",
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-android-permissions": "1.0.2",
-    "cordova-plugin-request-location-accuracy": "2.3.0"
+    "cordova-plugin-request-location-accuracy": "2.3.0",
+    "cordova-plugin-device-orientation": "2.0.1"
   };
 });

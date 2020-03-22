@@ -16,4 +16,7 @@ export interface Point {
     accErrorZ?: number;
     errorSpeed?: number;
     errorSpeedZ?: number;
+    gpsCurrentSpeed?: number;
+    isGPSEnable?: boolean;
+    isSetError?: boolean;
 }
