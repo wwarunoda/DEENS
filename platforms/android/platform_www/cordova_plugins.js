@@ -338,6 +338,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "navigator.compass"
       ]
+    },
+    {
+      "id": "cordova-plugin-stepcounter.stepcounter",
+      "file": "plugins/cordova-plugin-stepcounter/www/stepcounter.js",
+      "pluginId": "cordova-plugin-stepcounter",
+      "clobbers": [
+        "stepcounter"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -358,6 +366,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-android-permissions": "1.0.2",
     "cordova-plugin-request-location-accuracy": "2.3.0",
-    "cordova-plugin-device-orientation": "2.0.1"
+    "cordova-plugin-device-orientation": "2.0.1",
+    "cordova-plugin-stepcounter": "1.0.0"
   };
 });

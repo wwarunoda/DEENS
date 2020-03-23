@@ -144,5 +144,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-stepcounter": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-stepcounter"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

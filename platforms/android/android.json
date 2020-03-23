@@ -82,6 +82,10 @@
             {
               "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"CordovaStepCounter\"><param name=\"android-package\" value=\"net.texh.cordovapluginstepcounter.CordovaStepCounter\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -152,11 +156,33 @@
             {
               "xml": "<provider android:authorities=\"${applicationId}.opener.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"io.github.pwlin.cordova.plugins.fileopener2.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/opener_paths\" /></provider>",
               "count": 1
+            },
+            {
+              "xml": "<service android:enabled=\"true\" android:name=\"net.texh.cordovapluginstepcounter.StepCounterService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"net.texh.cordovapluginstepcounter.StepCounterBootReceiver\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /></intent-filter></receiver>",
+              "count": 1
             }
           ],
           "application": [
             {
               "xml": "<provider android:authorities=\"${applicationId}.emailcomposer.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"de.appplant.cordova.emailcomposer.Provider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/emailcomposer_provider_paths\" /></provider>",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.sensor.stepcounter\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.sensor.stepdetector\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
               "count": 1
             }
           ]
@@ -221,6 +247,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-stepcounter": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -564,6 +593,14 @@
       "clobbers": [
         "navigator.compass"
       ]
+    },
+    {
+      "id": "cordova-plugin-stepcounter.stepcounter",
+      "file": "plugins/cordova-plugin-stepcounter/www/stepcounter.js",
+      "pluginId": "cordova-plugin-stepcounter",
+      "clobbers": [
+        "stepcounter"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -584,6 +621,7 @@
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-android-permissions": "1.0.2",
     "cordova-plugin-request-location-accuracy": "2.3.0",
-    "cordova-plugin-device-orientation": "2.0.1"
+    "cordova-plugin-device-orientation": "2.0.1",
+    "cordova-plugin-stepcounter": "1.0.0"
   }
 }
