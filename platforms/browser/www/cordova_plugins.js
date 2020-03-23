@@ -350,6 +350,14 @@ module.exports = [
         "id": "cordova-plugin-device-orientation.CompassProxy",
         "pluginId": "cordova-plugin-device-orientation",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-stepcounter/www/stepcounter.js",
+        "id": "cordova-plugin-stepcounter.stepcounter",
+        "pluginId": "cordova-plugin-stepcounter",
+        "clobbers": [
+            "stepcounter"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -372,7 +380,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-android-permissions": "1.0.2",
     "cordova-plugin-request-location-accuracy": "2.3.0",
-    "cordova-plugin-device-orientation": "2.0.1"
+    "cordova-plugin-device-orientation": "2.0.1",
+    "cordova-plugin-stepcounter": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

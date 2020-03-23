@@ -35,6 +35,7 @@
     "@ionic-native/sqlite": "^5.18.0",
     "@ionic-native/sqlite-porter": "^5.18.0",
     "@ionic-native/status-bar": "^5.18.0",
+    "@ionic-native/stepcounter": "^5.23.0",
     "@ionic/angular": "^4.11.7",
     "cordova": "^9.0.0",
     "cordova-android": "^8.1.0",
@@ -49,6 +50,7 @@
     "cordova-plugin-gyroscope": "^0.1.4",
     "cordova-plugin-request-location-accuracy": "^2.3.0",
     "cordova-plugin-sensors": "git+https://github.com/fabiorogeriosj/cordova-plugin-sensors.git",
+    "cordova-plugin-stepcounter": "^1.0.1",
     "cordova-sqlite-storage": "^3.4.1",
     "core-js": "^2.6.11",
     "filelogger": "^1.0.3",
@@ -82,7 +84,7 @@
     "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
+    "karma": "^4.4.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
@@ -118,7 +120,8 @@
       "cordova-plugin-request-location-accuracy": {
         "PLAY_SERVICES_LOCATION_VERSION": "16.+"
       },
-      "cordova-plugin-device-orientation": {}
+      "cordova-plugin-device-orientation": {},
+      "cordova-plugin-stepcounter": {}
     },
     "platforms": [
       "browser"

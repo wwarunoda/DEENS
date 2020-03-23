@@ -175,7 +175,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n";
+    __webpack_exports__["default"] = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n";
     /***/
   },
 
@@ -195,7 +195,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n<p>Compass:- {{compassHeading}}</p>\r\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\r\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\r\n<div id=\"map\"></div>\r\n";
+    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\n<p>Compass:- {{compassHeading}}</p>\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\n<div id=\"map\"></div>\n";
     /***/
   },
 
@@ -215,7 +215,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h</p>\r\n<p>GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n\r\n<ion-button expand=\"block\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button expand=\"block\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button expand=\"block\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button expand=\"block\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n\r\n\r\n<table>\r\n  <tr>\r\n    <td size=\"4\">Longitude</td>\r\n    <td> {{gpsLatLng.lat}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Latitude</td>\r\n    <td>{{gpsLatLng.lng}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Speed</td>\r\n    <td>{{gpsSpeed}}</td>\r\n  </tr>\r\n  <tr>\r\n    <td size=\"4\">Count</td>\r\n    <td>{{count}}</td>\r\n  </tr>\r\n</table>\r\n\r\n";
+    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h</p>\n<p>GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\n\n<ion-button expand=\"block\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\n<ion-button expand=\"block\" (click)=\"gpsConfig()\">GPS Config</ion-button>\n<ion-button expand=\"block\" (click)=\"setError()\">Set/Stop Error</ion-button>\n<ion-button expand=\"block\" (click)=\"sendEmail()\">Send Email</ion-button>\n\n\n<table>\n  <tr>\n    <td size=\"4\">Longitude</td>\n    <td> {{gpsLatLng.lat}}</td>\n  </tr>\n  <tr>\n    <td size=\"4\">Latitude</td>\n    <td>{{gpsLatLng.lng}}</td>\n  </tr>\n  <tr>\n    <td size=\"4\">Speed</td>\n    <td>{{gpsSpeed}}</td>\n  </tr>\n  <tr>\n    <td size=\"4\">Count</td>\n    <td>{{count}}</td>\n  </tr>\n</table>\n\n";
     /***/
   },
 
@@ -235,7 +235,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\r\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\r\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\r\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\r\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\r\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\r\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\r\n<div id=\"map\"></div>\r\n";
+    __webpack_exports__["default"] = "<p>Speed: {{currentSpeed}} Km/h   | SpeedZ: {{currentSpeedZ}} Km/h | GPS Access - {{isGpsAccess}} | Set Error - {{isSetError}}</p>\n<ion-button size=\"small\" (click)=\"fixedErrorStop()\">Start Navigating</ion-button>\n<ion-button size=\"small\" (click)=\"gpsConfig()\">GPS Config</ion-button>\n<ion-button size=\"small\" (click)=\"setError()\">Set/Stop Error</ion-button>\n<ion-button size=\"small\" (click)=\"sendEmail()\">Send Email</ion-button>\n<ion-button size=\"small\" (click)=\"fallowThePath()\">Follow the path</ion-button>\n<p>Completed Distance - {{distanceCompletedKm | number : '1.2-2'}}</p>\n<div id=\"map\"></div>\n";
     /***/
   },
 
@@ -908,7 +908,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXE1TQ1xcREVFTlMgV09SS0lOR1xcREVFTlMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */";
+    __webpack_exports__["default"] = ".leaflet-control-container .leaflet-routing-container-hide {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2xhaGlydS9Eb2N1bWVudHMvUHJvamVjdHMvYXIvREVFTlMvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sZWFmbGV0LWNvbnRyb2wtY29udGFpbmVyIC5sZWFmbGV0LXJvdXRpbmctY29udGFpbmVyLWhpZGUge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59IiwiLmxlYWZsZXQtY29udHJvbC1jb250YWluZXIgLmxlYWZsZXQtcm91dGluZy1jb250YWluZXItaGlkZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */";
     /***/
   },
 
@@ -1203,7 +1203,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9Xb3JrL3dvcmsuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL1dvcmsvd29yay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */";
+    __webpack_exports__["default"] = "div{\n    height: 1000px;\n    width: 100%;\n  }\n  \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9Xb3JrL3dvcmsuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL1dvcmsvd29yay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xuICAgIGhlaWdodDogMTAwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gICJdfQ== */";
     /***/
   },
 
@@ -2229,7 +2229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "div{\r\n    height: 1000px;\r\n    width: 100%;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgaGVpZ2h0OiAxMDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgIl19 */";
+    __webpack_exports__["default"] = "div{\n    height: 1000px;\n    width: 100%;\n  }\n  \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sZWFmbGV0L2xlYWZsZXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0VBQ2IiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xlYWZsZXQvbGVhZmxldC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xuICAgIGhlaWdodDogMTAwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gICJdfQ== */";
     /***/
   },
 
@@ -3787,7 +3787,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! D:\MSC\DEENS WORKING\DEENS\src\main.ts */
+    /*! /home/lahiru/Documents/Projects/ar/DEENS/src/main.ts */
     "./src/main.ts");
     /***/
   }
